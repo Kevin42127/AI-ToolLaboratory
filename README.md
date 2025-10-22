@@ -1,97 +1,130 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# AI ToolLaboratory
 
-# Getting Started
+一個使用 Next.js 14、TypeScript 和 Material UI 建構的現代化 AI 工具推薦網站。
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## 特性
 
-## Step 1: Start Metro
+- 🎨 **Material Design** - 遵循 Google Material Design 設計語言
+- 🎯 **直觀美觀** - 清晰的視覺層級和流暢的使用者體驗
+- 📱 **響應式設計** - 完美適配行動裝置、平板和桌面設備
+- 🔍 **智慧搜尋** - 即時搜尋工具名稱、描述和標籤
+- 🏷️ **分類篩選** - 按類別快速篩選AI工具
+- 🎨 **單色系統** - 統一的品牌色和灰階色系，無漸層設計
+- ⚡ **靜態生成** - 超快的載入速度和SEO優化
+- 📦 **100款AI工具** - 涵蓋文本生成、圖像生成、圖像編輯、程式碼輔助、影片製作、語音合成、音樂生成、翻譯、客服、3D建模、教育、遊戲等16大領域
+- 🧪 **實驗室概念** - 將AI工具視為實驗室中的精密儀器，幫助用戶進行創新實驗
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+## 技術棧
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+- **框架**: Next.js 14 (App Router)
+- **語言**: TypeScript
+- **UI庫**: Material UI v5
+- **樣式**: MUI 系統 + Emotion
+- **部署**: Vercel
 
-```sh
-# Using npm
+## 快速開始
+
+### 安裝依賴
+
+```bash
+npm install
+```
+
+### 開發模式
+
+```bash
+npm run dev
+```
+
+在瀏覽器中開啟 [http://localhost:3000](http://localhost:3000) 查看結果。
+
+### 建構生產版本
+
+```bash
+npm run build
 npm start
-
-# OR using Yarn
-yarn start
 ```
 
-## Step 2: Build and run your app
+## 專案結構
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
-```sh
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
+```
+/app
+  /page.tsx                 # 首頁 - 工具列表
+  /tools/[id]/page.tsx      # 工具詳情頁
+  /layout.tsx               # 全域布局
+/components
+  /ToolCard.tsx             # 工具卡片元件
+  /SearchBar.tsx            # 搜尋欄
+  /CategoryFilter.tsx       # 分類篩選
+  /Header.tsx               # 頂部導覽
+  /Footer.tsx               # 底部
+/data
+  /tools.ts                 # AI工具資料（100款工具）
+  /categories.ts            # 分類資料
+/lib
+  /utils.ts                 # 工具函數
+/theme
+  /theme.ts                 # MUI主題設定
 ```
 
-### iOS
+## 功能說明
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+### 首頁
+- 展示所有AI工具的卡片網格
+- 搜尋欄支援即時搜尋
+- 分類標籤支援快速篩選
+- 響應式布局（行動裝置單列，平板2列，桌面3-4列）
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+### 工具詳情頁
+- 詳細的工具介紹和說明
+- 標籤展示
+- 定價資訊
+- 造訪官網連結
+- 麵包屑導覽
 
-```sh
-bundle install
+## AI工具分類
+
+AI ToolLaboratory 收錄了 **100款** 熱門AI工具，涵蓋以下16大類別：
+
+- **文本生成** - ChatGPT、Claude、Gemini、Notion AI、Jasper、Copy.ai、Writesonic、Grammarly、Character.AI、Poe 等
+- **圖像生成** - Midjourney、DALL·E 3、Stable Diffusion、Leonardo.AI、Adobe Firefly 等
+- **圖像編輯** - Remove.bg、Adobe Photoshop AI、Luminar Neo、Topaz Labs、Cleanup.pictures 等
+- **程式碼輔助** - GitHub Copilot、Cursor、Tabnine、Replit AI、Hugging Face、Replicate 等
+- **影片製作** - Runway、Sora、Pika、HeyGen、Synthesia、Descript、Luma AI、Opus Clip、Vizard、Pictory、Fliki 等
+- **語音合成** - ElevenLabs、Murf AI、Play.ht、Resemble AI、Otter.ai、Krisp、Fireflies.ai 等
+- **音樂生成** - Suno AI、Mubert、AIVA、Soundraw、Boomy 等
+- **翻譯工具** - DeepL、ChatGPT 翻譯、Translate.Video、Reverso 等
+- **客戶服務** - Intercom AI、Drift、Ada、Zendesk AI、Tidio 等
+- **3D建模** - Spline AI、Kaedim、Meshy、Alpha3D 等
+- **教育學習** - Khan Academy AI、Duolingo Max、Quizlet AI、Cognii 等
+- **遊戲開發** - Scenario、Rosebud AI、Ludo AI 等
+- **行銷工具** - Namelix、Brand24 AI、Surfer SEO、AdCreative.ai 等
+- **資料分析** - Tableau AI、Julius AI、Akkio、Perplexity AI 等
+- **設計工具** - Canva AI、Figma AI、Tome、Beautiful.ai、Framer AI 等
+
+## 部署到 Vercel
+
+1. 推送程式碼到 GitHub 儲存庫
+2. 在 [Vercel](https://vercel.com) 匯入專案
+3. Vercel 會自動檢測 Next.js 專案並完成部署
+
+或使用 Vercel CLI:
+
+```bash
+npm install -g vercel
+vercel
 ```
 
-Then, and every time you update your native dependencies, run:
+## 設計規範
 
-```sh
-bundle exec pod install
-```
+- **品牌色**: 深藍色系統 (#1976d2)
+- **灰階色系**: 統一的 50-900 灰階等級
+- **無漸層**: 所有背景和按鈕使用純色
+- **圓角**: 統一 8px 圓角
+- **陰影**: Material Design elevation 系統
+- **版權**: © 2025
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+## 授權
 
-```sh
-# Using npm
-npm run ios
+© AI ToolLaboratory.
 
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
