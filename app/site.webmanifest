@@ -1,0 +1,21 @@
+{
+  "name": "AI ToolLaboratory",
+  "short_name": "AI ToolLab",
+  "description": "探索100款精選AI工具，提升您的工作效率",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1976d2",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
