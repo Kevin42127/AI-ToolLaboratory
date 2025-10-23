@@ -11,13 +11,14 @@ export default function Footer() {
       sx={{
         py: { xs: 3, sm: 4 },
         mt: { xs: 6, sm: 8 },
-        backgroundColor: 'grey.100',
+        backgroundColor: 'primary.main',
         borderTop: '1px solid',
-        borderColor: 'grey.300',
+        borderColor: 'primary.dark',
+        color: 'white',
       }}
     >
       <Container maxWidth="xl">
-        <Typography variant="body2" color="text.secondary" align="center" sx={{ fontSize: { xs: '0.8rem', sm: '0.875rem' } }}>
+        <Typography variant="body2" align="center" sx={{ fontSize: { xs: '0.8rem', sm: '0.875rem' }, color: 'white' }}>
           © AI ToolLaboratory.
         </Typography>
       </Container>

@@ -51,6 +51,7 @@ export default function Header({ searchQuery = '', onSearchChange }: HeaderProps
                 color: 'inherit',
                 fontSize: { xs: '1rem', sm: '1.15rem', md: '1.25rem' },
                 display: { xs: mobileSearchOpen ? 'none' : 'block', md: 'block' },
+                fontWeight: 700,
               }}
             >
               AI ToolLaboratory

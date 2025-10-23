@@ -2,7 +2,6 @@
 
 import { createTheme } from '@mui/material/styles';
 
-// 统一品牌色 - 使用深蓝色作为主色调
 const theme = createTheme({
   palette: {
     primary: {
@@ -17,7 +16,6 @@ const theme = createTheme({
       dark: '#212121',
       contrastText: '#ffffff',
     },
-    // 统一灰度色系
     grey: {
       50: '#fafafa',
       100: '#f5f5f5',

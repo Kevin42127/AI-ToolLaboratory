@@ -44,6 +44,12 @@ export default function CategoryFilter({ selectedCategory, onSelectCategory }: C
           sx={{
             cursor: 'pointer',
             flexShrink: 0,
+            '&:hover': {
+              backgroundColor: selectedCategory === category.slug 
+                ? 'primary.dark' 
+                : 'primary.main',
+              color: 'white',
+            },
           }}
         />
       ))}
