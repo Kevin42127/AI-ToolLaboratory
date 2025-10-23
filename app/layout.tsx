@@ -9,6 +9,9 @@ import BackToTop from '@/components/BackToTop';
 export const metadata: Metadata = {
   title: 'AI ToolLaboratory',
   description: '發現最好的AI工具，提升工作效率',
+  verification: {
+    google: 'ikA4eMUhLTjnxBSzCa1RpgmEg5SL_scysFac4hD4b-k',
+  },
   icons: {
     icon: [
       { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
