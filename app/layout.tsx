@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -36,6 +37,12 @@ export default function RootLayout({
         <meta name="google-adsense-account" content="ca-pub-7335462712833157" />
       </head>
       <body style={{ margin: 0 }}>
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7335462712833157"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
             <CssBaseline />
