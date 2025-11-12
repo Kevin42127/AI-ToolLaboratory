@@ -32,6 +32,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="zh-TW">
+      <head>
+        <meta name="google-adsense-account" content="ca-pub-7335462712833157" />
+      </head>
       <body style={{ margin: 0 }}>
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
