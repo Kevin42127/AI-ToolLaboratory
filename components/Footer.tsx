@@ -23,9 +23,9 @@ export default function Footer() {
       sx={{
         py: { xs: 3, sm: 4 },
         mt: { xs: 6, sm: 8 },
-        backgroundColor: 'primary.main',
+        backgroundColor: '#1a1a1a',
         borderTop: '1px solid',
-        borderColor: 'primary.dark',
+        borderColor: '#333',
         color: 'white',
       }}
     >

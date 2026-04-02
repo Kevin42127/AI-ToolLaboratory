@@ -48,7 +48,7 @@ export default function HomePage() {
           mb: 6,
           py: { xs: 4, sm: 5, md: 6 },
           px: { xs: 2, sm: 3 },
-          bgcolor: 'primary.main',
+          bgcolor: '#1a1a1a',
           color: 'white',
           borderRadius: 2,
         }}>

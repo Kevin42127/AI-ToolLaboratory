@@ -64,7 +64,7 @@ export default function Header({ searchQuery = '', onSearchChange, showSearch = 
   };
 
   return (
-    <AppBar position="sticky" elevation={2}>
+    <AppBar position="sticky" sx={{ boxShadow: 2, bgcolor: '#1a1a1a' }}>
       <Container maxWidth={false} disableGutters>
         <Toolbar disableGutters sx={{ py: { xs: 1, sm: 0.5 }, px: { xs: 2, sm: 3, md: 4 }, display: 'flex', alignItems: 'center' }}>
           <IconButton
@@ -303,20 +303,25 @@ export default function Header({ searchQuery = '', onSearchChange, showSearch = 
         anchor="left"
         open={mobileMenuOpen}
         onClose={handleMobileMenuToggle}
+        PaperProps={{
+          sx: {
+            width: 250,
+            bgcolor: '#1a1a1a',
+            color: 'white',
+            backgroundImage: 'none',
+          }
+        }}
         sx={{
           display: { xs: 'block', lg: 'none' },
-          '& .MuiDrawer-paper': {
-            width: 250,
-          },
         }}
       >
-        <Box sx={{ pt: 2, pb: 1, px: 2 }}>
-          <Typography variant="h6" sx={{ fontWeight: 700 }}>
+        <Box sx={{ pt: 2, pb: 1, px: 2, bgcolor: '#1a1a1a' }}>
+          <Typography variant="h6" sx={{ fontWeight: 700, color: 'white' }}>
             Menu
           </Typography>
         </Box>
-        <Divider />
-        <List>
+        <Divider sx={{ borderColor: '#333' }} />
+        <List sx={{ bgcolor: '#1a1a1a' }}>
           <ListItem disablePadding>
             <ListItemButton 
               component={Link} 
