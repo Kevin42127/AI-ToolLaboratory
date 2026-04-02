@@ -32,15 +32,15 @@ export default function PrivacyPolicy() {
           The only information we may collect is:
         </Typography>
         
-        <Box component="ul" sx={{ pl: 3, mb: 2 }}>
-          <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-            • Anonymous usage data and analytics through Google Analytics
+        <Box component="ul" sx={{ pl: 3, mb: 2, listStyleType: 'disc' }}>
+          <Typography component="li" variant="body1" sx={{ mb: 1, display: 'list-item' }}>
+            Anonymous usage data and analytics through Google Analytics
           </Typography>
-          <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-            • IP addresses and browser information for security and analytics purposes
+          <Typography component="li" variant="body1" sx={{ mb: 1, display: 'list-item' }}>
+            IP addresses and browser information for security and analytics purposes
           </Typography>
-          <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-            • Cookies for website functionality and advertising (Google AdSense)
+          <Typography component="li" variant="body1" sx={{ mb: 1, display: 'list-item' }}>
+            Cookies for website functionality and advertising (Google AdSense)
           </Typography>
         </Box>
 
@@ -56,18 +56,18 @@ export default function PrivacyPolicy() {
           Since we don't collect personal information, we use the limited anonymous data we collect for:
         </Typography>
         
-        <Box component="ul" sx={{ pl: 3, mb: 2 }}>
-          <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-            • To improve our website and user experience
+        <Box component="ul" sx={{ pl: 3, mb: 2, listStyleType: 'disc' }}>
+          <Typography component="li" variant="body1" sx={{ mb: 1, display: 'list-item' }}>
+            To improve our website and user experience
           </Typography>
-          <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-            • To analyze website traffic and usage patterns
+          <Typography component="li" variant="body1" sx={{ mb: 1, display: 'list-item' }}>
+            To analyze website traffic and usage patterns
           </Typography>
-          <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-            • To display relevant advertisements through Google AdSense
+          <Typography component="li" variant="body1" sx={{ mb: 1, display: 'list-item' }}>
+            To display relevant advertisements through Google AdSense
           </Typography>
-          <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-            • To ensure website security and prevent abuse
+          <Typography component="li" variant="body1" sx={{ mb: 1, display: 'list-item' }}>
+            To ensure website security and prevent abuse
           </Typography>
         </Box>
 
@@ -79,12 +79,12 @@ export default function PrivacyPolicy() {
           Our website uses the following third-party services:
         </Typography>
         
-        <Box component="ul" sx={{ pl: 3, mb: 2 }}>
-          <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-            • <strong>Google AdSense:</strong> For displaying advertisements
+        <Box component="ul" sx={{ pl: 3, mb: 2, listStyleType: 'disc' }}>
+          <Typography component="li" variant="body1" sx={{ mb: 1, display: 'list-item' }}>
+            <strong>Google AdSense:</strong> For displaying advertisements
           </Typography>
-          <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-            • <strong>Google Analytics:</strong> For website analytics
+          <Typography component="li" variant="body1" sx={{ mb: 1, display: 'list-item' }}>
+            <strong>Google Analytics:</strong> For website analytics
           </Typography>
         </Box>
 
@@ -112,18 +112,18 @@ export default function PrivacyPolicy() {
           Since we don't collect personal information, you don't need to worry about:
         </Typography>
         
-        <Box component="ul" sx={{ pl: 3, mb: 2 }}>
-          <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-            • <strong>No personal data to access</strong> - We don't store any of your personal information
+        <Box component="ul" sx={{ pl: 3, mb: 2, listStyleType: 'disc' }}>
+          <Typography component="li" variant="body1" sx={{ mb: 1, display: 'list-item' }}>
+            <strong>No personal data to access</strong> - We don't store any of your personal information
           </Typography>
-          <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-            • <strong>No data to delete</strong> - Since we don't collect personal data, there's nothing to delete
+          <Typography component="li" variant="body1" sx={{ mb: 1, display: 'list-item' }}>
+            <strong>No data to delete</strong> - Since we don't collect personal data, there's nothing to delete
           </Typography>
-          <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-            • <strong>No accounts to manage</strong> - Our website requires no registration or login
+          <Typography component="li" variant="body1" sx={{ mb: 1, display: 'list-item' }}>
+            <strong>No accounts to manage</strong> - Our website requires no registration or login
           </Typography>
-          <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-            • <strong>Cookie control</strong> - You can control cookies through your browser settings
+          <Typography component="li" variant="body1" sx={{ mb: 1, display: 'list-item' }}>
+            <strong>Cookie control</strong> - You can control cookies through your browser settings
           </Typography>
         </Box>
 

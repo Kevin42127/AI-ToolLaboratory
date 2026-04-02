@@ -108,48 +108,48 @@ export default function AboutPage() {
           We cover 16 major categories of AI tools:
         </Typography>
         
-        <Box component="ul" sx={{ pl: 3, mb: 2 }}>
-          <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-            • Text Generation & Writing Assistants
+        <Box component="ul" sx={{ pl: 3, mb: 2, listStyleType: 'disc' }}>
+          <Typography component="li" variant="body1" sx={{ mb: 1, display: 'list-item' }}>
+            Text Generation & Writing Assistants
           </Typography>
-          <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-            • Image Generation & Editing
+          <Typography component="li" variant="body1" sx={{ mb: 1, display: 'list-item' }}>
+            Image Generation & Editing
           </Typography>
-          <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-            • Code Assistance & Development
+          <Typography component="li" variant="body1" sx={{ mb: 1, display: 'list-item' }}>
+            Code Assistance & Development
           </Typography>
-          <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-            • Video Production & Editing
+          <Typography component="li" variant="body1" sx={{ mb: 1, display: 'list-item' }}>
+            Video Production & Editing
           </Typography>
-          <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-            • Voice Synthesis & Audio
+          <Typography component="li" variant="body1" sx={{ mb: 1, display: 'list-item' }}>
+            Voice Synthesis & Audio
           </Typography>
-          <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-            • Music Generation
+          <Typography component="li" variant="body1" sx={{ mb: 1, display: 'list-item' }}>
+            Music Generation
           </Typography>
-          <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-            • Translation & Language
+          <Typography component="li" variant="body1" sx={{ mb: 1, display: 'list-item' }}>
+            Translation & Language
           </Typography>
-          <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-            • Customer Service & Support
+          <Typography component="li" variant="body1" sx={{ mb: 1, display: 'list-item' }}>
+            Customer Service & Support
           </Typography>
-          <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-            • 3D Modeling & Design
+          <Typography component="li" variant="body1" sx={{ mb: 1, display: 'list-item' }}>
+            3D Modeling & Design
           </Typography>
-          <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-            • Education & Learning
+          <Typography component="li" variant="body1" sx={{ mb: 1, display: 'list-item' }}>
+            Education & Learning
           </Typography>
-          <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-            • Game Development
+          <Typography component="li" variant="body1" sx={{ mb: 1, display: 'list-item' }}>
+            Game Development
           </Typography>
-          <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-            • Marketing Tools
+          <Typography component="li" variant="body1" sx={{ mb: 1, display: 'list-item' }}>
+            Marketing Tools
           </Typography>
-          <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-            • Data Analysis
+          <Typography component="li" variant="body1" sx={{ mb: 1, display: 'list-item' }}>
+            Data Analysis
           </Typography>
-          <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-            • Design Tools
+          <Typography component="li" variant="body1" sx={{ mb: 1, display: 'list-item' }}>
+            Design Tools
           </Typography>
         </Box>
 
@@ -161,21 +161,21 @@ export default function AboutPage() {
           In the rapidly growing world of AI tools, it's easy to get overwhelmed. We cut through the noise to provide you with:
         </Typography>
         
-        <Box component="ul" sx={{ pl: 3, mb: 2 }}>
-          <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-            • <strong>Curated Selection:</strong> Only the best and most useful AI tools make it to our list
+        <Box component="ul" sx={{ pl: 3, mb: 2, listStyleType: 'disc' }}>
+          <Typography component="li" variant="body1" sx={{ mb: 1, display: 'list-item' }}>
+            <strong>Curated Selection:</strong> Only the best and most useful AI tools make it to our list
           </Typography>
-          <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-            • <strong>Detailed Reviews:</strong> Comprehensive information about each tool's features and capabilities
+          <Typography component="li" variant="body1" sx={{ mb: 1, display: 'list-item' }}>
+            <strong>Detailed Reviews:</strong> Comprehensive information about each tool's features and capabilities
           </Typography>
-          <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-            • <strong>Regular Updates:</strong> We continuously add new tools and update existing reviews
+          <Typography component="li" variant="body1" sx={{ mb: 1, display: 'list-item' }}>
+            <strong>Regular Updates:</strong> We continuously add new tools and update existing reviews
           </Typography>
-          <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-            • <strong>User-Friendly Interface:</strong> Easy search and filtering to find exactly what you need
+          <Typography component="li" variant="body1" sx={{ mb: 1, display: 'list-item' }}>
+            <strong>User-Friendly Interface:</strong> Easy search and filtering to find exactly what you need
           </Typography>
-          <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-            • <strong>Free Access:</strong> All our information is completely free to access
+          <Typography component="li" variant="body1" sx={{ mb: 1, display: 'list-item' }}>
+            <strong>Free Access:</strong> All our information is completely free to access
           </Typography>
         </Box>
 

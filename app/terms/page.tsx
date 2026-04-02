@@ -75,18 +75,18 @@ export default function TermsOfService() {
           You agree not to:
         </Typography>
         
-        <Box component="ul" sx={{ pl: 3, mb: 2 }}>
-          <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-            • Use the website for any unlawful purpose
+        <Box component="ul" sx={{ pl: 3, mb: 2, listStyleType: 'disc' }}>
+          <Typography component="li" variant="body1" sx={{ mb: 1, display: 'list-item' }}>
+            Use the website for any unlawful purpose
           </Typography>
-          <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-            • Attempt to gain unauthorized access to our systems
+          <Typography component="li" variant="body1" sx={{ mb: 1, display: 'list-item' }}>
+            Attempt to gain unauthorized access to our systems
           </Typography>
-          <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-            • Interfere with or disrupt the website or servers
+          <Typography component="li" variant="body1" sx={{ mb: 1, display: 'list-item' }}>
+            Interfere with or disrupt the website or servers
           </Typography>
-          <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-            • Post or transmit harmful or offensive content
+          <Typography component="li" variant="body1" sx={{ mb: 1, display: 'list-item' }}>
+            Post or transmit harmful or offensive content
           </Typography>
         </Box>
 
