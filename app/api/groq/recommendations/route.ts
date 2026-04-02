@@ -2,11 +2,19 @@ import { NextRequest, NextResponse } from 'next/server';
 import { Groq } from 'groq-sdk';
 
 const groq = new Groq({
-  apiKey: process.env.GROQ_API_KEY,
+  apiKey: process.env.GROQ_API_KEY || 'dummy-key-for-build',
 });
 
 export async function POST(request: NextRequest) {
   try {
+    // Check if API key is configured
+    if (!process.env.GROQ_API_KEY || process.env.GROQ_API_KEY === 'dummy-key-for-build') {
+      return NextResponse.json(
+        { insights: 'AI insights are currently unavailable. Please configure the GROQ_API_KEY environment variable.' },
+        { status: 200 }
+      );
+    }
+
     const { preferences, topTools } = await request.json();
 
     const prompt = `You are an AI tool expert helping users find the best AI tools for their needs.
