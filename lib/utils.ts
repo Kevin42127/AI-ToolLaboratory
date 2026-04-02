@@ -22,9 +22,9 @@ export function searchTools(tools: AITool[], query: string): AITool[] {
 
 export function getPricingLabel(pricing: AITool['pricing']): string {
   const labels = {
-    free: '免費',
-    freemium: '免費/付費',
-    paid: '付費',
+    free: 'Free',
+    freemium: 'Free/Paid',
+    paid: 'Paid',
   };
   return labels[pricing];
 }

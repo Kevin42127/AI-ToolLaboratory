@@ -35,7 +35,7 @@ export default function ToolDetailPage({ params }: ToolDetailPageProps) {
 
   return (
     <>
-      <Header />
+      <Header showSearch={false} />
       <Container maxWidth="lg" sx={{ py: { xs: 2, sm: 3, md: 4 }, px: { xs: 2, sm: 3 } }}>
         <Breadcrumbs sx={{ mb: 3 }}>
         <Link href="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', color: 'inherit' }}>
@@ -77,25 +77,16 @@ export default function ToolDetailPage({ params }: ToolDetailPageProps) {
             </Box>
           </Box>
 
-          <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
-            <Button
-              variant="contained"
-              size="large"
-              href={tool.website}
-              target="_blank"
-              rel="noopener noreferrer"
-              startIcon={<LaunchIcon />}
-            >
-              訪問官網
-            </Button>
-            <Button
-              variant="outlined"
-              size="large"
-              href="/"
-            >
-              返回首頁
-            </Button>
-          </Box>
+          <Button
+            variant="contained"
+            size="large"
+            href={tool.website}
+            target="_blank"
+            rel="noopener noreferrer"
+            startIcon={<LaunchIcon />}
+          >
+            訪問官網
+          </Button>
 
         </CardContent>
       </Card>

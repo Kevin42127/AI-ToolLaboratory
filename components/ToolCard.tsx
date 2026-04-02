@@ -69,7 +69,7 @@ export default function ToolCard({ tool }: ToolCardProps) {
           endIcon={<OpenInNewIcon />}
           disableElevation
         >
-          訪問官網
+          Visit Website
         </Button>
       </Box>
     </Card>

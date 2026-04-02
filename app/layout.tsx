@@ -9,7 +9,7 @@ import BackToTop from '@/components/BackToTop';
 
 export const metadata: Metadata = {
   title: 'AI ToolLaboratory',
-  description: '發現最好的AI工具，提升工作效率',
+  description: 'Discover the best AI tools to boost your productivity and creativity',
   verification: {
     google: 'ikA4eMUhLTjnxBSzCa1RpgmEg5SL_scysFac4hD4b-k',
   },
@@ -32,7 +32,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="zh-TW">
+    <html lang="en">
       <head>
         <meta name="google-adsense-account" content="ca-pub-7335462712833157" />
       </head>

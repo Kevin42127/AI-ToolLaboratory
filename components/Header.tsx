@@ -9,18 +9,28 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
 import IconButton from '@mui/material/IconButton';
+import Button from '@mui/material/Button';
+import Drawer from '@mui/material/Drawer';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemText from '@mui/material/ListItemText';
+import Divider from '@mui/material/Divider';
 import SearchIcon from '@mui/icons-material/Search';
 import CloseIcon from '@mui/icons-material/Close';
+import MenuIcon from '@mui/icons-material/Menu';
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
 
 interface HeaderProps {
   searchQuery?: string;
   onSearchChange?: (value: string) => void;
+  showSearch?: boolean;
 }
 
-export default function Header({ searchQuery = '', onSearchChange }: HeaderProps) {
+export default function Header({ searchQuery = '', onSearchChange, showSearch = true }: HeaderProps) {
   const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
   const isHomePage = pathname === '/';
@@ -38,11 +48,36 @@ export default function Header({ searchQuery = '', onSearchChange }: HeaderProps
     }
   };
 
+  const handleMobileMenuToggle = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
+  const handleMenuItemClick = () => {
+    setMobileMenuOpen(false);
+  };
+
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (isHomePage) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   return (
     <AppBar position="sticky" elevation={2}>
-      <Container maxWidth="xl">
-        <Toolbar disableGutters sx={{ py: { xs: 1, sm: 0.5 } }}>
-          <Link href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+      <Container maxWidth={false} disableGutters>
+        <Toolbar disableGutters sx={{ py: { xs: 1, sm: 0.5 }, px: { xs: 2, sm: 3, md: 4 } }}>
+          <IconButton
+            color="inherit"
+            aria-label="open menu"
+            edge="start"
+            onClick={handleMobileMenuToggle}
+            sx={{ mr: 2, display: { xs: mobileSearchOpen ? 'none' : 'flex', lg: 'none' } }}
+          >
+            <MenuIcon />
+          </IconButton>
+          
+          <Link href="/" onClick={handleLogoClick} style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}>
             <Typography
               variant="h6"
               noWrap
@@ -60,97 +95,248 @@ export default function Header({ searchQuery = '', onSearchChange }: HeaderProps
           
           <Box sx={{ flexGrow: 1 }} />
           
-          <Box sx={{ display: { xs: 'none', md: 'block' }, width: '100%', maxWidth: 400 }}>
-            <TextField
-              fullWidth
-              size="small"
-              placeholder="搜尋AI工具..."
-              value={searchQuery}
-              onChange={(e) => handleSearchChange(e.target.value)}
-              InputProps={{
-                startAdornment: (
-                  <InputAdornment position="start">
-                    <SearchIcon sx={{ color: 'white' }} />
-                  </InputAdornment>
-                ),
-              }}
-              sx={{
-                '& .MuiOutlinedInput-root': {
-                  color: 'white',
-                  '& fieldset': {
-                    borderColor: 'rgba(255, 255, 255, 0.5)',
-                  },
-                  '&:hover fieldset': {
-                    borderColor: 'rgba(255, 255, 255, 0.7)',
-                  },
-                  '&.Mui-focused fieldset': {
-                    borderColor: 'white',
-                  },
-                },
-                '& .MuiOutlinedInput-input': {
-                  '&::placeholder': {
+          {showSearch && (
+            <Box sx={{ display: { xs: 'none', md: 'flex' }, justifyContent: 'center', width: '100%', maxWidth: 500, mx: 'auto' }}>
+              <TextField
+                fullWidth
+                size="small"
+                placeholder="Search AI tools..."
+                value={searchQuery}
+                onChange={(e) => handleSearchChange(e.target.value)}
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <SearchIcon sx={{ color: 'white' }} />
+                    </InputAdornment>
+                  ),
+                }}
+                sx={{
+                  '& .MuiOutlinedInput-root': {
                     color: 'white',
+                    '& fieldset': {
+                      borderColor: 'rgba(255, 255, 255, 0.5)',
+                    },
+                    '&:hover fieldset': {
+                      borderColor: 'rgba(255, 255, 255, 0.7)',
+                    },
+                    '&.Mui-focused fieldset': {
+                      borderColor: 'white',
+                    },
                   },
+                  '& .MuiOutlinedInput-input': {
+                    '&::placeholder': {
+                      color: 'white',
+                    },
+                  },
+                }}
+              />
+            </Box>
+          )}
+          
+          <Box sx={{ flexGrow: 1 }} />
+          
+          {/* Quick Links - 桌面端 */}
+          <Box sx={{ display: { xs: 'none', lg: 'flex' }, gap: 2 }}>
+            <Button
+              component={Link}
+              href="/"
+              color="inherit"
+              sx={{
+                textTransform: 'none',
+                fontSize: { md: '0.8rem', lg: '0.9rem' },
+                px: { md: 1, lg: 2 },
+                '&:hover': {
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
                 },
               }}
-            />
+            >
+              Home
+            </Button>
+            <Button
+              component={Link}
+              href="/tools/finder"
+              color="inherit"
+              sx={{
+                textTransform: 'none',
+                fontSize: { md: '0.8rem', lg: '0.9rem' },
+                px: { md: 1, lg: 2 },
+                '&:hover': {
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                },
+              }}
+            >
+              AI Finder
+            </Button>
+            <Button
+              component={Link}
+              href="/about"
+              color="inherit"
+              sx={{
+                textTransform: 'none',
+                fontSize: { md: '0.8rem', lg: '0.9rem' },
+                px: { md: 1, lg: 2 },
+                '&:hover': {
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                },
+              }}
+            >
+              About
+            </Button>
+            <Button
+              component={Link}
+              href="/privacy"
+              color="inherit"
+              sx={{
+                textTransform: 'none',
+                fontSize: { md: '0.8rem', lg: '0.9rem' },
+                px: { md: 1, lg: 2 },
+                '&:hover': {
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                },
+              }}
+            >
+              Privacy
+            </Button>
+            <Button
+              component={Link}
+              href="/terms"
+              color="inherit"
+              sx={{
+                textTransform: 'none',
+                fontSize: { md: '0.8rem', lg: '0.9rem' },
+                px: { md: 1, lg: 2 },
+                '&:hover': {
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                },
+              }}
+            >
+              Terms
+            </Button>
+            <Button
+              component={Link}
+              href="/contact"
+              color="inherit"
+              sx={{
+                textTransform: 'none',
+                fontSize: { md: '0.8rem', lg: '0.9rem' },
+                px: { md: 1, lg: 2 },
+                '&:hover': {
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                },
+              }}
+            >
+              Contact
+            </Button>
           </Box>
 
-          <Box sx={{ display: { xs: 'flex', md: 'none' }, alignItems: 'center', width: mobileSearchOpen ? '100%' : 'auto' }}>
-            {mobileSearchOpen ? (
-              <Box sx={{ display: 'flex', alignItems: 'center', width: '100%', gap: 1 }}>
-                <TextField
-                  fullWidth
-                  size="small"
-                  placeholder="搜尋AI工具..."
-                  value={searchQuery}
-                  onChange={(e) => handleSearchChange(e.target.value)}
-                  autoFocus
-                  InputProps={{
-                    startAdornment: (
-                      <InputAdornment position="start">
-                        <SearchIcon sx={{ color: 'white' }} />
-                      </InputAdornment>
-                    ),
-                  }}
-                  sx={{
-                    '& .MuiOutlinedInput-root': {
-                      color: 'white',
-                      '& fieldset': {
-                        borderColor: 'rgba(255, 255, 255, 0.5)',
-                      },
-                      '&:hover fieldset': {
-                        borderColor: 'rgba(255, 255, 255, 0.7)',
-                      },
-                      '&.Mui-focused fieldset': {
-                        borderColor: 'white',
-                      },
-                    },
-                    '& .MuiOutlinedInput-input': {
-                      '&::placeholder': {
+          {showSearch && (
+            <Box sx={{ display: { xs: 'flex', md: 'none' }, alignItems: 'center', width: mobileSearchOpen ? '100%' : 'auto' }}>
+              {mobileSearchOpen ? (
+                <Box sx={{ display: 'flex', alignItems: 'center', width: '100%', gap: 1 }}>
+                  <TextField
+                    fullWidth
+                    size="small"
+                    placeholder="Search AI tools..."
+                    value={searchQuery}
+                    onChange={(e) => handleSearchChange(e.target.value)}
+                    autoFocus
+                    InputProps={{
+                      startAdornment: (
+                        <InputAdornment position="start">
+                          <SearchIcon sx={{ color: 'white' }} />
+                        </InputAdornment>
+                      ),
+                    }}
+                    sx={{
+                      '& .MuiOutlinedInput-root': {
                         color: 'white',
+                        '& fieldset': {
+                          borderColor: 'rgba(255, 255, 255, 0.5)',
+                        },
+                        '&:hover fieldset': {
+                          borderColor: 'rgba(255, 255, 255, 0.7)',
+                        },
+                        '&.Mui-focused fieldset': {
+                          borderColor: 'white',
+                        },
                       },
-                    },
-                  }}
-                />
+                      '& .MuiOutlinedInput-input': {
+                        '&::placeholder': {
+                          color: 'white',
+                        },
+                      },
+                    }}
+                  />
+                  <IconButton
+                    onClick={handleMobileSearchToggle}
+                    sx={{ color: 'white' }}
+                  >
+                    <CloseIcon />
+                  </IconButton>
+                </Box>
+              ) : (
                 <IconButton
                   onClick={handleMobileSearchToggle}
                   sx={{ color: 'white' }}
                 >
-                  <CloseIcon />
+                  <SearchIcon />
                 </IconButton>
-              </Box>
-            ) : (
-              <IconButton
-                onClick={handleMobileSearchToggle}
-                sx={{ color: 'white' }}
-              >
-                <SearchIcon />
-              </IconButton>
-            )}
-          </Box>
+              )}
+            </Box>
+          )}
         </Toolbar>
       </Container>
+
+      <Drawer
+        anchor="left"
+        open={mobileMenuOpen}
+        onClose={handleMobileMenuToggle}
+        sx={{
+          display: { xs: 'block', lg: 'none' },
+          '& .MuiDrawer-paper': {
+            width: 250,
+          },
+        }}
+      >
+        <Box sx={{ pt: 2, pb: 1, px: 2 }}>
+          <Typography variant="h6" sx={{ fontWeight: 700 }}>
+            Menu
+          </Typography>
+        </Box>
+        <Divider />
+        <List>
+          <ListItem disablePadding>
+            <ListItemButton component={Link} href="/" onClick={handleMenuItemClick}>
+              <ListItemText primary="Home" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton component={Link} href="/tools/finder" onClick={handleMenuItemClick}>
+              <ListItemText primary="AI Finder" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton component={Link} href="/about" onClick={handleMenuItemClick}>
+              <ListItemText primary="About" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton component={Link} href="/privacy" onClick={handleMenuItemClick}>
+              <ListItemText primary="Privacy" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton component={Link} href="/terms" onClick={handleMenuItemClick}>
+              <ListItemText primary="Terms" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton component={Link} href="/contact" onClick={handleMenuItemClick}>
+              <ListItemText primary="Contact" />
+            </ListItemButton>
+          </ListItem>
+        </List>
+      </Drawer>
     </AppBar>
   );
 }

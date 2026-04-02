@@ -3,9 +3,8 @@
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import Link from '@mui/material/Link';
-import LaunchIcon from '@mui/icons-material/Launch';
+import Grid from '@mui/material/Grid';
 
 export default function Footer() {
   return (
@@ -20,39 +19,38 @@ export default function Footer() {
         color: 'white',
       }}
     >
-      <Container maxWidth="xl">
-        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2 }}>
-          <Typography variant="body2" align="center" sx={{ fontSize: { xs: '0.8rem', sm: '0.875rem' }, color: 'white' }}>
-            © AI ToolLaboratory.
-          </Typography>
-          
-          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-            <Typography variant="body2" sx={{ color: 'white', fontSize: { xs: '0.75rem', sm: '0.8rem' } }}>
-              相關網站：
+      <Container maxWidth="lg">
+        <Grid container spacing={4} sx={{ mb: 4 }} justifyContent="center">
+          <Grid item xs={12} md={5}>
+            <Typography variant="h6" sx={{ mb: 2, fontWeight: 'bold' }}>
+              AI ToolLaboratory
             </Typography>
-            <Button
-              component={Link}
-              href="https://devkitofficial.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              variant="outlined"
-              size="small"
-              endIcon={<LaunchIcon sx={{ fontSize: 14 }} />}
-              sx={{
-                color: 'white',
-                borderColor: 'white',
-                fontSize: { xs: '0.75rem', sm: '0.8rem' },
-                py: 0.5,
-                px: 1.5,
-                '&:hover': {
-                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                  borderColor: 'white',
-                },
-              }}
-            >
-              DevKit
-            </Button>
-          </Box>
+            <Typography variant="body2" sx={{ mb: 2, lineHeight: 1.6 }}>
+              Discover the best AI tools to boost your productivity and creativity. Contact us at tyouxipindao@gmail.com
+            </Typography>
+          </Grid>
+          
+          <Grid item xs={12} md={4}>
+            <Typography variant="h6" sx={{ mb: 2, fontWeight: 'bold' }}>
+              Quick Links
+            </Typography>
+            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
+              <Link href="/about" color="inherit" underline="hover">About Us</Link>
+              <Link href="/privacy" color="inherit" underline="hover">Privacy Policy</Link>
+              <Link href="/terms" color="inherit" underline="hover">Terms of Service</Link>
+              <Link href="/contact" color="inherit" underline="hover">Contact</Link>
+            </Box>
+          </Grid>
+        </Grid>
+        
+        <Box sx={{ 
+          borderTop: '1px solid rgba(255, 255, 255, 0.2)', 
+          pt: 3, 
+          textAlign: 'center' 
+        }}>
+          <Typography variant="body2" sx={{ color: 'white' }}>
+            © 2025 AI ToolLaboratory. All rights reserved.
+          </Typography>
         </Box>
       </Container>
     </Box>
