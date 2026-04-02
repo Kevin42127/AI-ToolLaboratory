@@ -1,5 +1,6 @@
 'use client';
 
+import { usePathname } from 'next/navigation';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
@@ -7,6 +8,15 @@ import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 
 export default function Footer() {
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
+
+  const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (isHomePage) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
   return (
     <Box
       component="footer"
@@ -21,7 +31,7 @@ export default function Footer() {
     >
       <Container maxWidth="lg">
         <Grid container spacing={4} sx={{ mb: 4 }} justifyContent="center">
-          <Grid item xs={12} md={5}>
+          <Grid item xs={12} md={4}>
             <Typography variant="h6" sx={{ mb: 2, fontWeight: 'bold' }}>
               AI ToolLaboratory
             </Typography>
@@ -30,15 +40,25 @@ export default function Footer() {
             </Typography>
           </Grid>
           
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12} sm={6} md={3}>
             <Typography variant="h6" sx={{ mb: 2, fontWeight: 'bold' }}>
-              Quick Links
+              Navigation
             </Typography>
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
+              <Link href="/" color="inherit" underline="hover" onClick={handleHomeClick} sx={{ cursor: 'pointer' }}>Home</Link>
+              <Link href="/tools/finder" color="inherit" underline="hover">AI Finder</Link>
               <Link href="/about" color="inherit" underline="hover">About Us</Link>
+              <Link href="/contact" color="inherit" underline="hover">Contact</Link>
+            </Box>
+          </Grid>
+
+          <Grid item xs={12} sm={6} md={3}>
+            <Typography variant="h6" sx={{ mb: 2, fontWeight: 'bold' }}>
+              Legal
+            </Typography>
+            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
               <Link href="/privacy" color="inherit" underline="hover">Privacy Policy</Link>
               <Link href="/terms" color="inherit" underline="hover">Terms of Service</Link>
-              <Link href="/contact" color="inherit" underline="hover">Contact</Link>
             </Box>
           </Grid>
         </Grid>

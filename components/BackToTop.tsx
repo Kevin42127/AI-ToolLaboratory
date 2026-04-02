@@ -37,7 +37,6 @@ export default function BackToTop() {
     <Zoom in={trigger}>
       <Fab
         onClick={scrollToTop}
-        color="primary"
         size="medium"
         aria-label="返回頂部"
         sx={{
@@ -47,6 +46,11 @@ export default function BackToTop() {
           zIndex: 1000,
           opacity: visible ? 1 : 0,
           transition: 'opacity 0.3s ease-in-out',
+          backgroundColor: '#000',
+          color: '#fff',
+          '&:hover': {
+            backgroundColor: '#333',
+          },
         }}
       >
         <KeyboardArrowUpIcon />

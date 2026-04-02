@@ -66,7 +66,7 @@ export default function Header({ searchQuery = '', onSearchChange, showSearch = 
   return (
     <AppBar position="sticky" elevation={2}>
       <Container maxWidth={false} disableGutters>
-        <Toolbar disableGutters sx={{ py: { xs: 1, sm: 0.5 }, px: { xs: 2, sm: 3, md: 4 } }}>
+        <Toolbar disableGutters sx={{ py: { xs: 1, sm: 0.5 }, px: { xs: 2, sm: 3, md: 4 }, display: 'flex', alignItems: 'center' }}>
           <IconButton
             color="inherit"
             aria-label="open menu"
@@ -96,20 +96,21 @@ export default function Header({ searchQuery = '', onSearchChange, showSearch = 
           <Box sx={{ flexGrow: 1 }} />
           
           {showSearch && (
-            <Box sx={{ display: { xs: 'none', md: 'flex' }, justifyContent: 'center', width: '100%', maxWidth: 500, mx: 'auto' }}>
+            <Box sx={{ 
+              display: { xs: 'none', md: 'block' },
+              position: 'absolute',
+              left: '50%',
+              transform: 'translateX(-50%)',
+              width: { md: '40%', lg: '35%' },
+              maxWidth: 500,
+              minWidth: 300
+            }}>
               <TextField
                 fullWidth
                 size="small"
                 placeholder="Search AI tools..."
                 value={searchQuery}
                 onChange={(e) => handleSearchChange(e.target.value)}
-                InputProps={{
-                  startAdornment: (
-                    <InputAdornment position="start">
-                      <SearchIcon sx={{ color: 'white' }} />
-                    </InputAdornment>
-                  ),
-                }}
                 sx={{
                   '& .MuiOutlinedInput-root': {
                     color: 'white',
@@ -129,11 +130,16 @@ export default function Header({ searchQuery = '', onSearchChange, showSearch = 
                     },
                   },
                 }}
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <SearchIcon sx={{ color: 'white' }} />
+                    </InputAdornment>
+                  ),
+                }}
               />
             </Box>
           )}
-          
-          <Box sx={{ flexGrow: 1 }} />
           
           {/* Quick Links - 桌面端 */}
           <Box sx={{ display: { xs: 'none', lg: 'flex' }, gap: 2 }}>
@@ -141,6 +147,12 @@ export default function Header({ searchQuery = '', onSearchChange, showSearch = 
               component={Link}
               href="/"
               color="inherit"
+              onClick={(e) => {
+                if (isHomePage) {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+              }}
               sx={{
                 textTransform: 'none',
                 fontSize: { md: '0.8rem', lg: '0.9rem' },
@@ -306,7 +318,17 @@ export default function Header({ searchQuery = '', onSearchChange, showSearch = 
         <Divider />
         <List>
           <ListItem disablePadding>
-            <ListItemButton component={Link} href="/" onClick={handleMenuItemClick}>
+            <ListItemButton 
+              component={Link} 
+              href="/" 
+              onClick={(e) => {
+                handleMenuItemClick();
+                if (isHomePage) {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+              }}
+            >
               <ListItemText primary="Home" />
             </ListItemButton>
           </ListItem>
