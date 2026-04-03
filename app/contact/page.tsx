@@ -18,7 +18,7 @@ export default function ContactPage() {
         </Typography>
         
         <Typography variant="body1" paragraph sx={{ mb: 4 }}>
-          We'd love to hear from you! Whether you have questions about AI tools, want to suggest a new tool for our database, or need help with anything related to AI ToolLaboratory, we're here to help.
+          We'd love to hear from you! Whether you have questions about AI tools, want to suggest a new tool for our database, or need help with anything related to CURIUSAI, we're here to help.
         </Typography>
 
         <Box sx={{ mb: 6 }}>

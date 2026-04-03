@@ -53,10 +53,10 @@ export default function HomePage() {
           borderRadius: 2,
         }}>
           <Typography variant="h3" component="h1" gutterBottom sx={{ fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem' } }}>
-            AI ToolLaboratory
+            CURIUSAI
           </Typography>
           <Typography variant="subtitle1" sx={{ fontSize: { xs: '1rem', sm: '1.1rem', md: '1.25rem' } }}>
-            Explore 100+ curated AI tools to enhance your productivity and creativity
+            Your Curious Guide to 100+ AI Tools
           </Typography>
         </Box>
 

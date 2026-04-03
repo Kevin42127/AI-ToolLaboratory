@@ -8,8 +8,8 @@ import Footer from '@/components/Footer';
 import BackToTop from '@/components/BackToTop';
 
 export const metadata: Metadata = {
-  title: 'AI ToolLaboratory',
-  description: 'Discover the best AI tools to boost your productivity and creativity',
+  title: 'CURIUSAI - Your Curious Guide to AI Tools',
+  description: 'Discover 100+ curated AI tools with CURIUSAI. Your curious guide to exploring the best AI solutions for productivity, creativity, and innovation.',
   verification: {
     google: 'ikA4eMUhLTjnxBSzCa1RpgmEg5SL_scysFac4hD4b-k',
   },

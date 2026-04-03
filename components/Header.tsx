@@ -89,7 +89,7 @@ export default function Header({ searchQuery = '', onSearchChange, showSearch = 
                 fontWeight: 700,
               }}
             >
-              AI ToolLaboratory
+              CURIUSAI
             </Typography>
           </Link>
           
@@ -101,9 +101,9 @@ export default function Header({ searchQuery = '', onSearchChange, showSearch = 
               position: 'absolute',
               left: '50%',
               transform: 'translateX(-50%)',
-              width: { md: '40%', lg: '35%' },
-              maxWidth: 500,
-              minWidth: 300
+              width: { md: '35%', lg: '30%' },
+              maxWidth: 400,
+              minWidth: 280
             }}>
               <TextField
                 fullWidth
@@ -178,6 +178,21 @@ export default function Header({ searchQuery = '', onSearchChange, showSearch = 
               }}
             >
               AI Finder
+            </Button>
+            <Button
+              component={Link}
+              href="/news"
+              color="inherit"
+              sx={{
+                textTransform: 'none',
+                fontSize: { md: '0.8rem', lg: '0.9rem' },
+                px: { md: 1, lg: 2 },
+                '&:hover': {
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                },
+              }}
+            >
+              News
             </Button>
             <Button
               component={Link}
@@ -340,6 +355,11 @@ export default function Header({ searchQuery = '', onSearchChange, showSearch = 
           <ListItem disablePadding>
             <ListItemButton component={Link} href="/tools/finder" onClick={handleMenuItemClick}>
               <ListItemText primary="AI Finder" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton component={Link} href="/news" onClick={handleMenuItemClick}>
+              <ListItemText primary="News" />
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>

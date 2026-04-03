@@ -24,7 +24,7 @@ export default function TermsOfService() {
         </Typography>
         
         <Typography variant="body1" paragraph>
-          By accessing and using AI ToolLaboratory, you accept and agree to be bound by the terms and provision of this agreement.
+          Welcome to CURIUSAI. By accessing and using this website, you accept and agree to be bound by the terms and provision of this agreement.
         </Typography>
 
         <Typography variant="h4" component="h2" sx={{ mt: 4, mb: 2 }}>
@@ -32,7 +32,7 @@ export default function TermsOfService() {
         </Typography>
         
         <Typography variant="body1" paragraph>
-          Permission is granted to temporarily access the materials (information or software) on AI ToolLaboratory for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title.
+          Permission is granted to temporarily access the materials (information or software) on CURIUSAI for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title.
         </Typography>
 
         <Typography variant="h4" component="h2" sx={{ mt: 4, mb: 2 }}>
@@ -40,7 +40,7 @@ export default function TermsOfService() {
         </Typography>
         
         <Typography variant="body1" paragraph>
-          The materials on AI ToolLaboratory are provided on an 'as is' basis. AI ToolLaboratory makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
+          The materials on CURIUSAI are provided on an 'as is' basis. CURIUSAI makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
         </Typography>
 
         <Typography variant="h4" component="h2" sx={{ mt: 4, mb: 2 }}>
@@ -48,7 +48,7 @@ export default function TermsOfService() {
         </Typography>
         
         <Typography variant="body1" paragraph>
-          In no event shall AI ToolLaboratory or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on AI ToolLaboratory.
+          In no event shall CURIUSAI or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on CURIUSAI.
         </Typography>
 
         <Typography variant="h4" component="h2" sx={{ mt: 4, mb: 2 }}>
@@ -56,7 +56,7 @@ export default function TermsOfService() {
         </Typography>
         
         <Typography variant="body1" paragraph>
-          The materials appearing on AI ToolLaboratory could include technical, typographical, or photographic errors. AI ToolLaboratory does not warrant that any of the materials on its website are accurate, complete, or current.
+          The materials appearing on CURIUSAI could include technical, typographical, or photographic errors. CURIUSAI does not warrant that any of the materials on its website are accurate, complete, or current.
         </Typography>
 
         <Typography variant="h4" component="h2" sx={{ mt: 4, mb: 2 }}>
@@ -64,7 +64,7 @@ export default function TermsOfService() {
         </Typography>
         
         <Typography variant="body1" paragraph>
-          AI ToolLaboratory has not reviewed all of the sites linked to our website and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by AI ToolLaboratory of the site.
+          CURIUSAI has not reviewed all of the sites linked to our website and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by CURIUSAI of the site.
         </Typography>
 
         <Typography variant="h4" component="h2" sx={{ mt: 4, mb: 2 }}>
@@ -95,7 +95,7 @@ export default function TermsOfService() {
         </Typography>
         
         <Typography variant="body1" paragraph>
-          All content on AI ToolLaboratory, including but not limited to text, graphics, logos, and images, is the property of AI ToolLaboratory or its content suppliers and is protected by intellectual property laws.
+          All content on CURIUSAI, including but not limited to text, graphics, logos, and images, is the property of CURIUSAI or its content suppliers and is protected by intellectual property laws.
         </Typography>
 
         <Typography variant="h4" component="h2" sx={{ mt: 4, mb: 2 }}>
@@ -103,7 +103,7 @@ export default function TermsOfService() {
         </Typography>
         
         <Typography variant="body1" paragraph>
-          Your use of AI ToolLaboratory is also governed by our Privacy Policy, which can be found in the footer of our website.
+          Your use of CURIUSAI is also governed by our Privacy Policy, which can be found in the footer of our website.
         </Typography>
 
         <Typography variant="h4" component="h2" sx={{ mt: 4, mb: 2 }}>
@@ -111,7 +111,7 @@ export default function TermsOfService() {
         </Typography>
         
         <Typography variant="body1" paragraph>
-          AI ToolLaboratory may revise these terms of service for its website at any time without notice. By using this website, you are agreeing to be bound by the then current version of these terms of service.
+          CURIUSAI may revise these terms of service for its website at any time without notice. By using this website, you are agreeing to be bound by the then current version of these terms of service.
         </Typography>
 
         <Typography variant="h4" component="h2" sx={{ mt: 4, mb: 2 }}>

@@ -19,7 +19,7 @@ export default function AboutPage() {
       <Container maxWidth="lg" sx={{ py: { xs: 4, md: 8 }, px: { xs: 2, sm: 3 } }}>
         <Paper sx={{ p: { xs: 3, md: 6 }, mb: 4, overflow: 'hidden' }}>
         <Typography variant="h3" component="h1" gutterBottom>
-          About AI ToolLaboratory
+          About CURIUSAI
         </Typography>
         
         <Typography variant="h5" component="h2" sx={{ mt: 4, mb: 2, color: 'primary.main' }}>
@@ -27,7 +27,7 @@ export default function AboutPage() {
         </Typography>
         
         <Typography variant="body1" paragraph>
-          AI ToolLaboratory is dedicated to helping professionals, creators, and businesses discover the most effective AI tools to enhance their productivity and creativity. We serve as your trusted laboratory for exploring the rapidly evolving world of artificial intelligence.
+          CURIUSAI is your curious guide to discovering the most effective AI tools to enhance your productivity and creativity. We help professionals, creators, and businesses explore the rapidly evolving world of artificial intelligence with curiosity and confidence.
         </Typography>
 
         <Typography variant="h5" component="h2" sx={{ mt: 4, mb: 2, color: 'primary.main' }}>
@@ -154,11 +154,11 @@ export default function AboutPage() {
         </Box>
 
         <Typography variant="h5" component="h2" sx={{ mt: 6, mb: 2, color: 'primary.main' }}>
-          Why Choose AI ToolLaboratory?
+          Why Choose CURIUSAI?
         </Typography>
         
         <Typography variant="body1" paragraph>
-          In the rapidly growing world of AI tools, it's easy to get overwhelmed. We cut through the noise to provide you with:
+          In the rapidly growing world of AI tools, it's easy to get overwhelmed. CURIUSAI cuts through the noise to provide you with:
         </Typography>
         
         <Box component="ul" sx={{ pl: 3, mb: 2, listStyleType: 'disc' }}>
@@ -184,11 +184,11 @@ export default function AboutPage() {
         </Typography>
         
         <Typography variant="body1" paragraph>
-          Ready to explore the world of AI tools? Browse our categories, use our search function to find specific tools, or check out our featured tools to discover the most popular AI solutions available today.
+          Ready to explore the world of AI tools with curiosity? Browse our categories, use our search function to find specific tools, or check out our featured tools to discover the most popular AI solutions available today.
         </Typography>
         
         <Typography variant="body1" paragraph>
-          Whether you're a developer, marketer, content creator, or business professional, AI ToolLaboratory has the tools you need to stay ahead in the AI revolution.
+          Whether you're a developer, marketer, content creator, or business professional, CURIUSAI has the tools you need to stay ahead in the AI revolution.
         </Typography>
       </Paper>
     </Container>

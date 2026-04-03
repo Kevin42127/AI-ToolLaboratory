@@ -33,10 +33,10 @@ export default function Footer() {
         <Grid container spacing={4} sx={{ mb: 4 }} justifyContent="center">
           <Grid item xs={12} md={4}>
             <Typography variant="h6" sx={{ mb: 2, fontWeight: 'bold' }}>
-              AI ToolLaboratory
+              CURIUSAI
             </Typography>
             <Typography variant="body2" sx={{ mb: 2, lineHeight: 1.6 }}>
-              Discover the best AI tools to boost your productivity and creativity. Contact us at tyouxipindao@gmail.com
+              Your curious guide to discovering and exploring the best AI tools available today.
             </Typography>
           </Grid>
           
@@ -47,6 +47,7 @@ export default function Footer() {
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
               <Link href="/" color="inherit" underline="hover" onClick={handleHomeClick} sx={{ cursor: 'pointer' }}>Home</Link>
               <Link href="/tools/finder" color="inherit" underline="hover">AI Finder</Link>
+              <Link href="/news" color="inherit" underline="hover">News</Link>
               <Link href="/about" color="inherit" underline="hover">About Us</Link>
               <Link href="/contact" color="inherit" underline="hover">Contact</Link>
             </Box>
@@ -69,7 +70,7 @@ export default function Footer() {
           textAlign: 'center' 
         }}>
           <Typography variant="body2" sx={{ color: 'white' }}>
-            © 2025 AI ToolLaboratory. All rights reserved.
+            © 2025 CURIUSAI. All rights reserved.
           </Typography>
         </Box>
       </Container>

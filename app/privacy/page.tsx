@@ -16,8 +16,8 @@ export default function PrivacyPolicy() {
           Privacy Policy
         </Typography>
         
-        <Typography variant="body1" paragraph>
-          Last updated: {new Date().toLocaleDateString()}
+        <Typography variant="body2" sx={{ mb: 4, color: 'text.secondary' }}>
+          Last Updated: January 2025
         </Typography>
 
         <Typography variant="h4" component="h2" sx={{ mt: 4, mb: 2 }}>
@@ -25,7 +25,7 @@ export default function PrivacyPolicy() {
         </Typography>
         
         <Typography variant="body1" paragraph>
-          <strong>AI ToolLaboratory does not collect personal information from users.</strong> Since our website does not require registration or login, we do not collect or store any personal data such as names, email addresses, or other identifiable information.
+          <strong>CURIUSAI does not collect personal information from users.</strong> Since our website does not require registration or login, we do not collect or store any personal data such as names, email addresses, or other identifiable information.
         </Typography>
         
         <Typography variant="body1" paragraph>
