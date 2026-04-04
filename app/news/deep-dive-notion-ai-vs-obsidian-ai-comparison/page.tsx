@@ -223,7 +223,6 @@ export default function ArticlePage() {
               Personal license with optional commercial add-ons. Core product is free for personal use. AI features available through paid plugins. Ideal for individual users and researchers.
             </Typography>
           </Box>
-          </Box>
 
           <Typography variant="h5" component="h2" sx={{ mt: 4, mb: 2 }}>
             Use Case Scenarios
