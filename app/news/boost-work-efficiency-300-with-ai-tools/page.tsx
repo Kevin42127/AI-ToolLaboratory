@@ -26,9 +26,6 @@ export default function ArticlePage() {
         <Paper sx={{ p: { xs: 3, md: 6 }, overflow: 'hidden' }}>
           <Box sx={{ mb: 3 }}>
             <Chip label="Productivity" color="primary" sx={{ mb: 2 }} />
-            <Typography variant="caption" display="block" color="text.secondary" sx={{ mb: 2 }}>
-              8 min read
-            </Typography>
           </Box>
 
           <Typography variant="h3" component="h1" gutterBottom>

@@ -263,17 +263,12 @@ export default function ResultsStep({ preferences, onReset, loading, setLoading 
                 }}
               />
             )}
-
+            
             <CardContent>
               <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
                 <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                   {index + 1}. {tool.name}
                 </Typography>
-                <Chip
-                  label={`${Math.round(tool.score)}% Match`}
-                  color={getScoreColor(tool.score)}
-                  size="small"
-                />
               </Box>
 
               <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
@@ -295,11 +290,31 @@ export default function ResultsStep({ preferences, onReset, loading, setLoading 
                 ))}
               </Box>
 
-              <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
+              <Box sx={{ mb: 2 }}>
+                <Typography variant="caption" color="text.secondary" sx={{ display: 'block', mb: 0.5 }}>
+                  Why we recommend this:
+                </Typography>
+                {tool.matchReasons.map((reason, idx) => (
+                  <Chip
+                    key={idx}
+                    label={reason}
+                    size="small"
+                    variant="outlined"
+                    sx={{ mr: 0.5, mb: 0.5 }}
+                  />
+                ))}
+              </Box>
+
+              <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap', alignItems: 'center' }}>
                 <Chip label={tool.pricing} size="small" color="primary" variant="outlined" />
                 {tool.category.slice(0, 2).map((cat) => (
                   <Chip key={cat} label={cat} size="small" variant="outlined" />
                 ))}
+                <Chip
+                  label={`${Math.round(tool.score)}% Match`}
+                  color={getScoreColor(tool.score)}
+                  size="small"
+                />
               </Box>
             </CardContent>
 

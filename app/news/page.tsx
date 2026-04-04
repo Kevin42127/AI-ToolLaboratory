@@ -19,7 +19,6 @@ const articles = [
     excerpt: 'Discover proven strategies and AI tools that can triple your productivity. Learn how to integrate AI into your daily workflow for maximum efficiency.',
     category: 'Productivity',
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop',
-    readTime: '8 min read',
   },
   {
     id: 2,
@@ -28,16 +27,38 @@ const articles = [
     excerpt: 'A comprehensive comparison of two leading AI assistants. Find out which one best suits your needs based on features, pricing, and use cases.',
     category: 'Tool Comparison',
     image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop',
-    readTime: '10 min read',
   },
   {
     id: 3,
     title: 'Top 10 Best AI Writing Tools in 2026',
     slug: 'top-10-ai-writing-tools-2026',
-    excerpt: 'Our curated list of the best AI writing assistants for content creators, marketers, and professionals. Compare features, pricing, and capabilities.',
+    excerpt: 'Our curated list of best AI writing assistants for content creators, marketers, and professionals. Compare features, pricing, and capabilities.',
     category: 'Tool Review',
     image: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop',
-    readTime: '12 min read',
+  },
+  {
+    id: 4,
+    title: 'How to Choose the Right AI Tools: Complete Guide',
+    slug: 'how-to-choose-the-right-ai-tools-complete-guide',
+    excerpt: 'Navigate the complex world of AI tools with confidence. This comprehensive guide will help you identify, evaluate, and select the perfect AI tools for your specific needs.',
+    category: 'Tutorial',
+    image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&auto=format&fit=crop',
+  },
+  {
+    id: 5,
+    title: 'AI Tools Market Trends 2025: Comprehensive Report',
+    slug: 'ai-tools-market-trends-2025-report',
+    excerpt: 'The AI tools landscape experienced explosive growth in 2025, with unprecedented innovation, investment, and adoption across industries. This comprehensive report analyzes the key trends, emerging technologies, and market dynamics.',
+    category: 'Industry Trends',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop',
+  },
+  {
+    id: 6,
+    title: 'Deep Dive: Notion AI vs Obsidian AI',
+    slug: 'deep-dive-notion-ai-vs-obsidian-ai-comparison',
+    excerpt: 'Two powerful AI-enhanced note-taking and knowledge management platforms go head-to-head. We compare their approaches, features, and ideal use cases to help you choose the right tool for your workflow.',
+    category: 'Tool Comparison',
+    image: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop',
   },
 ];
 
@@ -86,9 +107,6 @@ export default function NewsPage() {
                       color="primary" 
                       sx={{ mb: 1 }}
                     />
-                    <Typography variant="caption" display="block" color="text.secondary">
-                      {article.readTime}
-                    </Typography>
                   </Box>
                   
                   <Typography variant="h6" component="h2" gutterBottom>
