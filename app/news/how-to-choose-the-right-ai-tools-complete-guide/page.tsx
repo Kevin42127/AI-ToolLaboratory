@@ -6,7 +6,6 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Chip from '@mui/material/Chip';
 import Divider from '@mui/material/Divider';
-import CardMedia from '@mui/material/CardMedia';
 import Link from 'next/link';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import Button from '@mui/material/Button';
@@ -34,19 +33,6 @@ export default function ArticlePage() {
           <Typography variant="h3" component="h1" gutterBottom>
             How to Choose the Right AI Tools: Complete Guide
           </Typography>
-
-          <CardMedia
-            component="img"
-            image="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&auto=format&fit=crop"
-            alt="How to Choose the Right AI Tools: Complete Guide"
-            sx={{
-              width: '100%',
-              height: 300,
-              objectFit: 'cover',
-              borderRadius: 2,
-              mb: 4
-            }}
-          />
 
           <Typography variant="subtitle1" color="text.secondary" paragraph sx={{ mb: 4 }}>
             Navigate the complex world of AI tools with confidence. This comprehensive guide will help you identify, evaluate, and select the perfect AI tools for your specific needs.
