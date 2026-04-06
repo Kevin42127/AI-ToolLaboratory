@@ -54,16 +54,16 @@ export default function ArticlePage() {
               </Typography>
               <Box component="ul" sx={{ pl: 2, listStyleType: 'disc' }}>
                 <Typography component="li" variant="body2" sx={{ mb: 1, display: 'list-item' }}>
-                  • AI-powered writing and editing assistance
+                  AI-powered writing and editing assistance
                 </Typography>
                 <Typography component="li" variant="body2" sx={{ mb: 1, display: 'list-item' }}>
-                  • Smart content organization and auto-tagging
+                  Smart content organization and auto-tagging
                 </Typography>
                 <Typography component="li" variant="body2" sx={{ mb: 1, display: 'list-item' }}>
-                  • Team collaboration with AI insights
+                  Team collaboration with AI insights
                 </Typography>
                 <Typography component="li" variant="body2" sx={{ mb: 1, display: 'list-item' }}>
-                  • Project management automation
+                  Project management automation
                 </Typography>
               </Box>
             </Box>
@@ -77,16 +77,16 @@ export default function ArticlePage() {
               </Typography>
               <Box component="ul" sx={{ pl: 2, listStyleType: 'disc' }}>
                 <Typography component="li" variant="body2" sx={{ mb: 1, display: 'list-item' }}>
-                  • AI-powered knowledge graph and linking
+                  AI-powered knowledge graph and linking
                 </Typography>
                 <Typography component="li" variant="body2" sx={{ mb: 1, display: 'list-item' }}>
-                  • Intelligent content discovery and search
+                  Intelligent content discovery and search
                 </Typography>
                 <Typography component="li" variant="body2" sx={{ mb: 1, display: 'list-item' }}>
-                  • Plugin ecosystem for extended functionality
+                  Plugin ecosystem for extended functionality
                 </Typography>
                 <Typography component="li" variant="body2" sx={{ mb: 1, display: 'list-item' }}>
-                  • Local-first approach with privacy focus
+                  Local-first approach with privacy focus
                 </Typography>
               </Box>
             </Box>
@@ -258,19 +258,19 @@ export default function ArticlePage() {
             </Typography>
             <Box component="ul" sx={{ pl: 2, listStyleType: 'disc' }}>
               <Typography component="li" variant="body2" sx={{ mb: 1, display: 'list-item' }}>
-                • You are a solo user or researcher managing personal knowledge
+                You are a solo user or researcher managing personal knowledge
               </Typography>
               <Typography component="li" variant="body2" sx={{ mb: 1, display: 'list-item' }}>
-                • You value privacy and local data control
+                You value privacy and local data control
               </Typography>
               <Typography component="li" variant="body2" sx={{ mb: 1, display: 'list-item' }}>
-                • You need advanced knowledge linking and graph visualization
+                You need advanced knowledge linking and graph visualization
               </Typography>
               <Typography component="li" variant="body2" sx={{ mb: 1, display: 'list-item' }}>
-                • You prefer flexible customization through plugins
+                You prefer flexible customization through plugins
               </Typography>
               <Typography component="li" variant="body2" sx={{ mb: 1, display: 'list-item' }}>
-                • You are focused on research and deep knowledge exploration
+                You are focused on research and deep knowledge exploration
               </Typography>
             </Box>
           </Box>
