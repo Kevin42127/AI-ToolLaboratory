@@ -6,8 +6,6 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
-import InputAdornment from '@mui/material/InputAdornment';
 import IconButton from '@mui/material/IconButton';
 import Button from '@mui/material/Button';
 import Drawer from '@mui/material/Drawer';
@@ -16,11 +14,12 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import Divider from '@mui/material/Divider';
-import SearchIcon from '@mui/icons-material/Search';
 import CloseIcon from '@mui/icons-material/Close';
 import MenuIcon from '@mui/icons-material/Menu';
+import SearchIcon from '@mui/icons-material/Search';
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
+import SearchBar from './SearchBar';
 
 interface HeaderProps {
   searchQuery?: string;
@@ -105,38 +104,10 @@ export default function Header({ searchQuery = '', onSearchChange, showSearch = 
               maxWidth: 400,
               minWidth: 280
             }}>
-              <TextField
-                fullWidth
-                size="small"
-                placeholder="Search AI tools..."
+              <SearchBar
                 value={searchQuery}
-                onChange={(e) => handleSearchChange(e.target.value)}
-                sx={{
-                  '& .MuiOutlinedInput-root': {
-                    color: 'white',
-                    '& fieldset': {
-                      borderColor: 'rgba(255, 255, 255, 0.5)',
-                    },
-                    '&:hover fieldset': {
-                      borderColor: 'rgba(255, 255, 255, 0.7)',
-                    },
-                    '&.Mui-focused fieldset': {
-                      borderColor: 'white',
-                    },
-                  },
-                  '& .MuiOutlinedInput-input': {
-                    '&::placeholder': {
-                      color: 'white',
-                    },
-                  },
-                }}
-                InputProps={{
-                  startAdornment: (
-                    <InputAdornment position="start">
-                      <SearchIcon sx={{ color: 'white' }} />
-                    </InputAdornment>
-                  ),
-                }}
+                onChange={handleSearchChange}
+                darkMode={true}
               />
             </Box>
           )}
@@ -260,39 +231,10 @@ export default function Header({ searchQuery = '', onSearchChange, showSearch = 
             <Box sx={{ display: { xs: 'flex', md: 'none' }, alignItems: 'center', width: mobileSearchOpen ? '100%' : 'auto' }}>
               {mobileSearchOpen ? (
                 <Box sx={{ display: 'flex', alignItems: 'center', width: '100%', gap: 1 }}>
-                  <TextField
-                    fullWidth
-                    size="small"
-                    placeholder="Search AI tools..."
+                  <SearchBar
                     value={searchQuery}
-                    onChange={(e) => handleSearchChange(e.target.value)}
-                    autoFocus
-                    InputProps={{
-                      startAdornment: (
-                        <InputAdornment position="start">
-                          <SearchIcon sx={{ color: 'white' }} />
-                        </InputAdornment>
-                      ),
-                    }}
-                    sx={{
-                      '& .MuiOutlinedInput-root': {
-                        color: 'white',
-                        '& fieldset': {
-                          borderColor: 'rgba(255, 255, 255, 0.5)',
-                        },
-                        '&:hover fieldset': {
-                          borderColor: 'rgba(255, 255, 255, 0.7)',
-                        },
-                        '&.Mui-focused fieldset': {
-                          borderColor: 'white',
-                        },
-                      },
-                      '& .MuiOutlinedInput-input': {
-                        '&::placeholder': {
-                          color: 'white',
-                        },
-                      },
-                    }}
+                    onChange={handleSearchChange}
+                    darkMode={true}
                   />
                   <IconButton
                     onClick={handleMobileSearchToggle}

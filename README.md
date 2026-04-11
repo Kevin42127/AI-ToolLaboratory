@@ -1,130 +1,100 @@
-# AI ToolLaboratory
+# CURIUSAI - Your Curious Guide to AI Tools
 
-一個使用 Next.js 14、TypeScript 和 Material UI 建構的現代化 AI 工具推薦網站。
+**Discover, Compare, and Choose the Perfect AI Tools for Your Needs**
 
-## 特性
+CURIUSAI is a comprehensive AI tools directory designed to help professionals, creators, and businesses navigate the rapidly evolving world of artificial intelligence. We curate, review, and analyze 100+ cutting-edge AI tools to help you make informed decisions.
 
-- 🎨 **Material Design** - 遵循 Google Material Design 設計語言
-- 🎯 **直觀美觀** - 清晰的視覺層級和流暢的使用者體驗
-- 📱 **響應式設計** - 完美適配行動裝置、平板和桌面設備
-- 🔍 **智慧搜尋** - 即時搜尋工具名稱、描述和標籤
-- 🏷️ **分類篩選** - 按類別快速篩選AI工具
-- 🎨 **單色系統** - 統一的品牌色和灰階色系，無漸層設計
-- ⚡ **靜態生成** - 超快的載入速度和SEO優化
-- 📦 **100款AI工具** - 涵蓋文本生成、圖像生成、圖像編輯、程式碼輔助、影片製作、語音合成、音樂生成、翻譯、客服、3D建模、教育、遊戲等16大領域
-- 🧪 **實驗室概念** - 將AI工具視為實驗室中的精密儀器，幫助用戶進行創新實驗
+## 🌟 What We Offer
 
-## 技術棧
+### Comprehensive Tool Directory
+Explore **100+ carefully curated AI tools** across 16 major categories, from text generation and image creation to code assistance and video production. Each tool is thoroughly evaluated and documented.
 
-- **框架**: Next.js 14 (App Router)
-- **語言**: TypeScript
-- **UI庫**: Material UI v5
-- **樣式**: MUI 系統 + Emotion
-- **部署**: Vercel
+### In-Depth Analysis
+Every tool features:
+- ✓ **Detailed Pros & Cons** - Honest evaluation of strengths and limitations
+- � **Comprehensive Descriptions** - What the tool does and who it's for
+- 💰 **Pricing Information** - Free, freemium, or paid options clearly marked
+- 🏷️ **Smart Categorization** - Easy filtering by use case and category
 
-## 快速開始
+### Expert Insights
+- 📚 **Original Articles** - Tool comparisons, tutorials, and industry trends
+- 🔍 **Real-World Use Cases** - Practical applications for each tool
+- 💡 **Selection Guides** - How to choose the right AI tools for your workflow
 
-### 安裝依賴
+## 🎯 Who Is This For?
 
-```bash
-npm install
-```
+- **Content Creators** - Find the best AI tools for writing, image generation, and video creation
+- **Developers** - Discover code assistants and development tools to boost productivity
+- **Business Professionals** - Explore AI solutions for marketing, customer service, and data analysis
+- **Designers** - Access cutting-edge design and creative AI tools
+- **Students & Educators** - Find AI tools for learning and teaching
 
-### 開發模式
+## 🚀 Key Features
 
-```bash
-npm run dev
-```
+### Smart Search & Discovery
+- **Instant Search** - Find tools quickly by name, description, or tags
+- **Category Filtering** - Browse by specific use cases and categories
+- **Responsive Design** - Perfect experience on desktop, tablet, and mobile
 
-在瀏覽器中開啟 [http://localhost:3000](http://localhost:3000) 查看結果。
+### Detailed Tool Information
+Each tool page includes:
+- **Comprehensive Overview** - What the tool does and its key capabilities
+- **Pros & Cons Analysis** - Balanced evaluation of strengths and weaknesses
+- **Pricing Details** - Clear information on free, freemium, and paid options
+- **Official Links** - Direct access to tool websites
 
-### 建構生產版本
+### Educational Content
+- **Comparison Articles** - Side-by-side analysis of similar tools
+- **How-to Guides** - Practical advice on choosing and using AI tools
+- **Industry Insights** - Latest trends and developments in AI tools
 
-```bash
-npm run build
-npm start
-```
+## AI Tools Categories
 
-## 專案結構
+CURIUSAI features **100+** popular AI tools across 16 major categories:
 
-```
-/app
-  /page.tsx                 # 首頁 - 工具列表
-  /tools/[id]/page.tsx      # 工具詳情頁
-  /layout.tsx               # 全域布局
-/components
-  /ToolCard.tsx             # 工具卡片元件
-  /SearchBar.tsx            # 搜尋欄
-  /CategoryFilter.tsx       # 分類篩選
-  /Header.tsx               # 頂部導覽
-  /Footer.tsx               # 底部
-/data
-  /tools.ts                 # AI工具資料（100款工具）
-  /categories.ts            # 分類資料
-/lib
-  /utils.ts                 # 工具函數
-/theme
-  /theme.ts                 # MUI主題設定
-```
+- **Text Generation** - ChatGPT, Claude, Gemini, Notion AI, Jasper, Copy.ai, Writesonic, Grammarly, Character.AI, Poe, etc.
+- **Image Generation** - Midjourney, DALL·E 3, Stable Diffusion, Leonardo.AI, Adobe Firefly, etc.
+- **Image Editing** - Remove.bg, Adobe Photoshop AI, Luminar Neo, Topaz Labs, Cleanup.pictures, etc.
+- **Code Assistant** - GitHub Copilot, Cursor, Tabnine, Windsurf, Hugging Face, Replicate, etc.
+- **Video Creation** - Runway, Sora, Pika, HeyGen, Synthesia, Descript, Luma AI, Opus Clip, Vizard, Pictory, Fliki, etc.
+- **Voice Synthesis** - ElevenLabs, Murf AI, Play.ht, Resemble AI, Otter.ai, Krisp, Fireflies.ai, etc.
+- **Music Generation** - Suno AI, Mubert, AIVA, Soundraw, Boomy, etc.
+- **Translation** - DeepL, ChatGPT Translation, Translate.Video, Reverso, etc.
+- **Customer Service** - Intercom AI, Drift, Ada, Zendesk AI, Tidio, etc.
+- **3D Modeling** - Spline AI, Kaedim, Meshy, Alpha3D, etc.
+- **Education** - Khan Academy AI (Khanmigo), Duolingo Max, Quizlet AI, Cognii, etc.
+- **Gaming** - Scenario, Rosebud AI, Ludo AI, etc.
+- **Marketing** - Namelix, Brand24 AI, Surfer SEO, AdCreative.ai, etc.
+- **Data Analysis** - Tableau AI, Julius AI, Akkio, Perplexity AI, etc.
+- **Design Tools** - Canva AI, Figma AI, Tome, Beautiful.ai, Framer AI, etc.
 
-## 功能說明
+## 📚 Featured Articles
 
-### 首頁
-- 展示所有AI工具的卡片網格
-- 搜尋欄支援即時搜尋
-- 分類標籤支援快速篩選
-- 響應式布局（行動裝置單列，平板2列，桌面3-4列）
+Our blog features in-depth articles to help you navigate the AI tools landscape:
 
-### 工具詳情頁
-- 詳細的工具介紹和說明
-- 標籤展示
-- 定價資訊
-- 造訪官網連結
-- 麵包屑導覽
+- **ChatGPT vs Claude** - Comprehensive comparison of two leading AI assistants
+- **Top 10 AI Writing Tools in 2026** - Best tools for content creators and marketers
+- **How to Choose the Right AI Tools** - Complete guide to evaluating and selecting AI tools
+- **AI Tools Market Trends 2025** - Industry analysis and future projections
+- **Boost Work Efficiency 300% with AI Tools** - Proven strategies for productivity
+- **Notion AI vs Obsidian AI** - Deep dive into AI-enhanced note-taking platforms
 
-## AI工具分類
+## 🌐 Visit CURIUSAI
 
-AI ToolLaboratory 收錄了 **100款** 熱門AI工具，涵蓋以下16大類別：
+Explore our comprehensive AI tools directory at [https://toollaboratory.vercel.app](https://toollaboratory.vercel.app)
 
-- **文本生成** - ChatGPT、Claude、Gemini、Notion AI、Jasper、Copy.ai、Writesonic、Grammarly、Character.AI、Poe 等
-- **圖像生成** - Midjourney、DALL·E 3、Stable Diffusion、Leonardo.AI、Adobe Firefly 等
-- **圖像編輯** - Remove.bg、Adobe Photoshop AI、Luminar Neo、Topaz Labs、Cleanup.pictures 等
-- **程式碼輔助** - GitHub Copilot、Cursor、Tabnine、Replit AI、Hugging Face、Replicate 等
-- **影片製作** - Runway、Sora、Pika、HeyGen、Synthesia、Descript、Luma AI、Opus Clip、Vizard、Pictory、Fliki 等
-- **語音合成** - ElevenLabs、Murf AI、Play.ht、Resemble AI、Otter.ai、Krisp、Fireflies.ai 等
-- **音樂生成** - Suno AI、Mubert、AIVA、Soundraw、Boomy 等
-- **翻譯工具** - DeepL、ChatGPT 翻譯、Translate.Video、Reverso 等
-- **客戶服務** - Intercom AI、Drift、Ada、Zendesk AI、Tidio 等
-- **3D建模** - Spline AI、Kaedim、Meshy、Alpha3D 等
-- **教育學習** - Khan Academy AI、Duolingo Max、Quizlet AI、Cognii 等
-- **遊戲開發** - Scenario、Rosebud AI、Ludo AI 等
-- **行銷工具** - Namelix、Brand24 AI、Surfer SEO、AdCreative.ai 等
-- **資料分析** - Tableau AI、Julius AI、Akkio、Perplexity AI 等
-- **設計工具** - Canva AI、Figma AI、Tome、Beautiful.ai、Framer AI 等
+- Browse 100+ AI tools across 16 categories
+- Read detailed pros and cons for each tool
+- Discover the perfect AI tools for your needs
+- Stay updated with the latest AI trends and insights
 
-## 部署到 Vercel
+## 📧 Contact
 
-1. 推送程式碼到 GitHub 儲存庫
-2. 在 [Vercel](https://vercel.com) 匯入專案
-3. Vercel 會自動檢測 Next.js 專案並完成部署
+Have questions or suggestions? We'd love to hear from you!
+- Email: youxipindao@gmail.com
+- Website: [https://toollaboratory.vercel.app](https://toollaboratory.vercel.app)
 
-或使用 Vercel CLI:
+---
 
-```bash
-npm install -g vercel
-vercel
-```
-
-## 設計規範
-
-- **品牌色**: 深藍色系統 (#1976d2)
-- **灰階色系**: 統一的 50-900 灰階等級
-- **無漸層**: 所有背景和按鈕使用純色
-- **圓角**: 統一 8px 圓角
-- **陰影**: Material Design elevation 系統
-- **版權**: © 2025
-
-## 授權
-
-© AI ToolLaboratory.
+© CURIUSAI 2025. Your curious guide to discovering the most effective AI tools.
 

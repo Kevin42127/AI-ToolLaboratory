@@ -8,7 +8,8 @@ import Chip from '@mui/material/Chip';
 import Box from '@mui/material/Box';
 import { AITool } from '@/data/tools';
 import { getPricingLabel, getPricingColor } from '@/lib/utils';
-import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import Link from 'next/link';
 
 interface ToolCardProps {
   tool: AITool;
@@ -63,13 +64,12 @@ export default function ToolCard({ tool }: ToolCardProps) {
         <Button
           fullWidth
           variant="contained"
-          href={tool.website}
-          target="_blank"
-          rel="noopener noreferrer"
-          endIcon={<OpenInNewIcon />}
+          component={Link}
+          href={`/tools/${tool.id}`}
+          endIcon={<ArrowForwardIcon />}
           disableElevation
         >
-          Visit Website
+          View Details
         </Button>
       </Box>
     </Card>

@@ -40,7 +40,7 @@ export default function ToolDetailPage({ params }: ToolDetailPageProps) {
         <Breadcrumbs sx={{ mb: 3 }}>
         <Link href="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', color: 'inherit' }}>
           <HomeIcon sx={{ mr: 0.5, fontSize: 20 }} />
-          首頁
+          Home
         </Link>
         <Typography color="text.primary">{tool.name}</Typography>
       </Breadcrumbs>
@@ -66,9 +66,40 @@ export default function ToolDetailPage({ params }: ToolDetailPageProps) {
             {tool.longDescription}
           </Typography>
 
+          {/* Pros and Cons Section */}
+          <Box sx={{ mb: 4, display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 3 }}>
+            {/* Pros */}
+            <Box>
+              <Typography variant="h6" sx={{ mb: 2, color: 'success.main', fontWeight: 600 }}>
+                ✓ Pros
+              </Typography>
+              <Box component="ul" sx={{ pl: 2, m: 0 }}>
+                {tool.pros.map((pro, index) => (
+                  <Typography component="li" key={index} variant="body2" sx={{ mb: 1, lineHeight: 1.6 }}>
+                    {pro}
+                  </Typography>
+                ))}
+              </Box>
+            </Box>
+
+            {/* Cons */}
+            <Box>
+              <Typography variant="h6" sx={{ mb: 2, color: 'error.main', fontWeight: 600 }}>
+                ✗ Cons
+              </Typography>
+              <Box component="ul" sx={{ pl: 2, m: 0 }}>
+                {tool.cons.map((con, index) => (
+                  <Typography component="li" key={index} variant="body2" sx={{ mb: 1, lineHeight: 1.6 }}>
+                    {con}
+                  </Typography>
+                ))}
+              </Box>
+            </Box>
+          </Box>
+
           <Box sx={{ mb: 4 }}>
             <Typography variant="subtitle2" sx={{ mb: 1.5 }}>
-              標籤
+              Tags
             </Typography>
             <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
               {tool.tags.map((tag, index) => (
@@ -85,7 +116,7 @@ export default function ToolDetailPage({ params }: ToolDetailPageProps) {
             rel="noopener noreferrer"
             startIcon={<LaunchIcon />}
           >
-            訪問官網
+            Visit Website
           </Button>
 
         </CardContent>
