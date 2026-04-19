@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
@@ -10,8 +10,7 @@ import Paper from '@mui/material/Paper';
 import Header from '@/components/Header';
 import PayPalHosted from '@/components/PayPalHosted';
 
-
-export default function SupportPage() {
+function SupportPageContent() {
   const searchParams = useSearchParams();
   const [message, setMessage] = useState<{ type: 'success' | 'cancelled' | null; text: string }>({ type: null, text: '' });
 
@@ -78,59 +77,93 @@ export default function SupportPage() {
             sx={{
               color: 'text.secondary',
               mb: 4,
-              maxWidth: '600px',
-              mx: 'auto',
+              fontSize: { xs: '1.2rem', sm: '1.4rem' },
             }}
           >
-            Your support helps us continue providing the best AI tools discovery platform
+            Help us continue providing the best AI tools discovery platform
           </Typography>
         </Box>
 
         <Grid container spacing={4} justifyContent="center">
-          <Grid item xs={12} md={8}>
+          <Grid item xs={12} md={10} lg={8}>
             <Paper
-              elevation={24}
+              elevation={3}
               sx={{
-                p: 4,
-                borderRadius: 4,
-                background: 'background.paper',
+                p: { xs: 3, sm: 4, md: 5 },
+                borderRadius: 3,
+                backgroundColor: 'background.paper',
               }}
             >
-              <Box sx={{ textAlign: 'center', mb: 4 }}>
-                <Typography variant="h4" sx={{ mb: 2, color: 'text.primary' }}>
+              <Box sx={{ textAlign: 'center', mb: 6 }}>
+                <Typography
+                  variant="h4"
+                  sx={{
+                    color: 'text.primary',
+                    fontWeight: 'bold',
+                    mb: 3,
+                  }}
+                >
                   Why Support Us?
                 </Typography>
-                <Typography variant="body1" sx={{ color: 'text.secondary', mb: 3 }}>
-                  CURIUSAI is dedicated to helping people discover and explore the best AI tools available today.
-                  Your contribution helps us:
+                <Typography
+                  variant="body1"
+                  sx={{
+                    color: 'text.secondary',
+                    mb: 4,
+                    maxWidth: '600px',
+                    mx: 'auto',
+                  }}
+                >
+                  Your contribution helps us maintain and improve this platform, ensuring we can continue to provide valuable AI tools discovery services to our community.
                 </Typography>
               </Box>
 
-              <Grid container spacing={3} sx={{ mb: 4 }}>
+              <Grid container spacing={3} sx={{ mb: 6 }}>
                 <Grid item xs={12} sm={6}>
-                  <Box sx={{ textAlign: 'center', p: 2 }}>
-                    <Typography variant="h6" sx={{ mb: 1, color: 'text.primary' }}>
-                      <span role="img" aria-label="search"> Maintain Platform</span>
+                  <Box sx={{ textAlign: 'center', p: 3 }}>
+                    <Typography
+                      variant="h6"
+                      sx={{
+                        color: 'primary.main',
+                        fontWeight: 'bold',
+                        mb: 2,
+                      }}
+                    >
+                      Platform Maintenance
                     </Typography>
                     <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                      Keep our servers running and the platform fast and reliable
+                      Keep our servers running and ensure smooth performance for all users
                     </Typography>
                   </Box>
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                  <Box sx={{ textAlign: 'center', p: 2 }}>
-                    <Typography variant="h6" sx={{ mb: 1, color: 'text.primary' }}>
-                      <span role="img" aria-label="tools"> Add New Tools</span>
+                  <Box sx={{ textAlign: 'center', p: 3 }}>
+                    <Typography
+                      variant="h6"
+                      sx={{
+                        color: 'primary.main',
+                        fontWeight: 'bold',
+                        mb: 2,
+                      }}
+                    >
+                      New Tools Discovery
                     </Typography>
                     <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                      Continuously research and add the latest AI tools to our database
+                      Research and add more innovative AI tools to our database
                     </Typography>
                   </Box>
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                  <Box sx={{ textAlign: 'center', p: 2 }}>
-                    <Typography variant="h6" sx={{ mb: 1, color: 'text.primary' }}>
-                      <span role="img" aria-label="star"> Improve Features</span>
+                  <Box sx={{ textAlign: 'center', p: 3 }}>
+                    <Typography
+                      variant="h6"
+                      sx={{
+                        color: 'primary.main',
+                        fontWeight: 'bold',
+                        mb: 2,
+                      }}
+                    >
+                      Feature Improvements
                     </Typography>
                     <Typography variant="body2" sx={{ color: 'text.secondary' }}>
                       Develop new features and enhance user experience
@@ -138,9 +171,16 @@ export default function SupportPage() {
                   </Box>
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                  <Box sx={{ textAlign: 'center', p: 2 }}>
-                    <Typography variant="h6" sx={{ mb: 1, color: 'text.primary' }}>
-                      <span role="img" aria-label="users"> Support Community</span>
+                  <Box sx={{ textAlign: 'center', p: 3 }}>
+                    <Typography
+                      variant="h6"
+                      sx={{
+                        color: 'primary.main',
+                        fontWeight: 'bold',
+                        mb: 2,
+                      }}
+                    >
+                      Community Support
                     </Typography>
                     <Typography variant="body2" sx={{ color: 'text.secondary' }}>
                       Provide support and resources for our growing community
