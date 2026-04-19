@@ -49,6 +49,7 @@ export default function Footer() {
               <Link href="/tools/finder" color="inherit" underline="hover">AI Finder</Link>
               <Link href="/news" color="inherit" underline="hover">News</Link>
               <Link href="/about" color="inherit" underline="hover">About Us</Link>
+              <Link href="/support" color="inherit" underline="hover">Support Us</Link>
               <Link href="/contact" color="inherit" underline="hover">Contact</Link>
             </Box>
           </Grid>

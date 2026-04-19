@@ -76,41 +76,40 @@ export default function Header({ searchQuery = '', onSearchChange, showSearch = 
             <MenuIcon />
           </IconButton>
           
-          <Link href="/" onClick={handleLogoClick} style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}>
-            <Typography
-              variant="h6"
-              noWrap
-              sx={{
-                letterSpacing: '.1rem',
-                color: 'inherit',
-                fontSize: { xs: '1rem', sm: '1.15rem', md: '1.25rem' },
-                display: { xs: mobileSearchOpen ? 'none' : 'block', md: 'block' },
-                fontWeight: 700,
-              }}
-            >
-              CURIUSAI
-            </Typography>
-          </Link>
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+            <Link href="/" onClick={handleLogoClick} style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}>
+              <Typography
+                variant="h6"
+                noWrap
+                sx={{
+                  letterSpacing: '.1rem',
+                  color: 'inherit',
+                  fontSize: { xs: '1rem', sm: '1.15rem', md: '1.25rem' },
+                  display: { xs: mobileSearchOpen ? 'none' : 'block', md: 'block' },
+                  fontWeight: 700,
+                }}
+              >
+                CURIUSAI
+              </Typography>
+            </Link>
+            
+            {showSearch && (
+              <Box sx={{ 
+                display: { xs: 'none', md: 'block' },
+                width: { md: '35%', lg: '30%' },
+                maxWidth: 400,
+                minWidth: 280
+              }}>
+                <SearchBar
+                  value={searchQuery}
+                  onChange={handleSearchChange}
+                  darkMode={true}
+                />
+              </Box>
+            )}
+          </Box>
           
           <Box sx={{ flexGrow: 1 }} />
-          
-          {showSearch && (
-            <Box sx={{ 
-              display: { xs: 'none', md: 'block' },
-              position: 'absolute',
-              left: '50%',
-              transform: 'translateX(-50%)',
-              width: { md: '35%', lg: '30%' },
-              maxWidth: 400,
-              minWidth: 280
-            }}>
-              <SearchBar
-                value={searchQuery}
-                onChange={handleSearchChange}
-                darkMode={true}
-              />
-            </Box>
-          )}
           
           {/* Quick Links - 桌面端 */}
           <Box sx={{ display: { xs: 'none', lg: 'flex' }, gap: 2 }}>
@@ -179,6 +178,21 @@ export default function Header({ searchQuery = '', onSearchChange, showSearch = 
               }}
             >
               About
+            </Button>
+            <Button
+              component={Link}
+              href="/support"
+              color="inherit"
+              sx={{
+                textTransform: 'none',
+                fontSize: { md: '0.8rem', lg: '0.9rem' },
+                px: { md: 1, lg: 2 },
+                '&:hover': {
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                },
+              }}
+            >
+              Support
             </Button>
             <Button
               component={Link}
@@ -307,6 +321,11 @@ export default function Header({ searchQuery = '', onSearchChange, showSearch = 
           <ListItem disablePadding>
             <ListItemButton component={Link} href="/about" onClick={handleMenuItemClick}>
               <ListItemText primary="About" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton component={Link} href="/support" onClick={handleMenuItemClick}>
+              <ListItemText primary="Support" />
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
