@@ -18,7 +18,7 @@ export const tools: AITool[] = [
     id: 'chatgpt',
     name: 'ChatGPT',
     description: 'Powerful conversational AI assistant for answering questions, writing, and programming',
-    longDescription: 'ChatGPT is a large language model developed by OpenAI, capable of natural conversation, creative writing, code generation, and problem-solving. Based on GPT-4 architecture with powerful understanding and generation capabilities. It excels at understanding context, generating human-like responses, and handling complex multi-turn conversations across various domains including technical writing, creative content, code development, and analytical tasks.',
+    longDescription: 'ChatGPT is a large language model developed by OpenAI, capable of natural conversation, creative writing, code generation, and problem-solving. Based on GPT-4 architecture with powerful understanding and generation capabilities. It excels at understanding context, generating human-like responses, and handling complex multi-turn conversations across various domains including technical writing, creative content, code development, and analytical tasks.\n\nPerfect for developers who need code debugging and documentation, content creators requiring writing assistance, students seeking homework help, and professionals looking for quick research and analysis. ChatGPT saves hours of work by providing instant solutions, explanations, and creative ideas across virtually any domain.',
     pros: [
       'Exceptional natural language understanding and generation',
       'Versatile across multiple domains and tasks',
