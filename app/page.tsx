@@ -11,10 +11,8 @@ import ToolCard from '@/components/ToolCard';
 import EnhancedFilter from '@/components/EnhancedFilter';
 import Header from '@/components/Header';
 import FeatureDialog from '@/components/FeatureDialog';
-import UserOnboarding from '@/components/UserOnboarding';
 import UserReset from '@/components/UserReset';
 import { filterToolsByCategory, searchTools } from '@/lib/utils';
-import { useUserPreferences } from '@/hooks/useUserPreferences';
 
 export default function HomePage() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -22,8 +20,7 @@ export default function HomePage() {
   const [selectedProfession, setSelectedProfession] = useState('all');
   const [selectedDifficulty, setSelectedDifficulty] = useState('all');
   const [featureDialogOpen, setFeatureDialogOpen] = useState(false);
-  const { preferences, isFirstVisit, isLoaded, addToRecentlyViewed, completeOnboarding } = useUserPreferences();
-
+  
   useEffect(() => {
     const hasSeenDialog = localStorage.getItem('hasSeenFinderDialog');
     if (!hasSeenDialog) {
@@ -37,29 +34,6 @@ export default function HomePage() {
 
   const filteredTools = useMemo(() => {
     let result = tools;
-    
-    // If user has preferences, use them for personalization
-    if (preferences.profession && !searchQuery && selectedCategory === 'all') {
-      const professionTags = {
-        developer: ['programming', 'code', 'development'],
-        designer: ['design', 'image', 'creative', 'art'],
-        marketer: ['marketing', 'seo', 'content', 'analytics'],
-        writer: ['writing', 'text', 'content'],
-        business: ['business', 'productivity', 'management'],
-        student: ['education', 'learning', 'research'],
-      };
-      
-      const relevantTags = professionTags[preferences.profession as keyof typeof professionTags] || [];
-      result = result.filter(tool => {
-        const toolTags = tool.tags.map(tag => tag.toLowerCase());
-        const toolCategories = tool.category.map(cat => cat.toLowerCase());
-        
-        return relevantTags.some(tag => 
-          toolTags.some(toolTag => toolTag.includes(tag)) ||
-          toolCategories.some(cat => cat.includes(tag))
-        );
-      });
-    }
     
     result = filterToolsByCategory(result, selectedCategory);
     result = searchTools(result, searchQuery);
@@ -103,7 +77,7 @@ export default function HomePage() {
     }
     
     return result;
-  }, [searchQuery, selectedCategory, selectedProfession, selectedDifficulty, preferences.profession]);
+  }, [searchQuery, selectedCategory, selectedProfession, selectedDifficulty]);
 
   return (
     <>
@@ -122,10 +96,7 @@ export default function HomePage() {
             CURIUSAI
           </Typography>
           <Typography variant="subtitle1" sx={{ fontSize: { xs: '1rem', sm: '1.1rem', md: '1.25rem' }, mb: 3 }}>
-            {preferences.profession 
-              ? `AI Tools for ${preferences.profession.charAt(0).toUpperCase() + preferences.profession.slice(1)}s - Personalized Recommendations`
-              : 'Find the Perfect AI Tools for Your Work - Save 80% Time on Research'
-            }
+            Find the Perfect AI Tools for Your Work - Save 80% Time on Research
           </Typography>
           
           <Box sx={{ 
@@ -242,20 +213,6 @@ export default function HomePage() {
         open={featureDialogOpen} 
         onClose={() => setFeatureDialogOpen(false)} 
       />
-      
-      {/* User Onboarding */}
-      {isLoaded && isFirstVisit && (
-        <UserOnboarding 
-          onComplete={() => {}} 
-          onSkip={() => {
-            // Handle skip - no personalization applied
-            console.log('User skipped personalization');
-          }}
-        />
-      )}
-      
-      {/* User Reset Button */}
-      <UserReset />
     </>
   );
 }
