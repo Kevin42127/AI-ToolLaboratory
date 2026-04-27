@@ -157,17 +157,22 @@ export default function UserOnboarding({ onComplete }: UserOnboardingProps) {
             
             <Box sx={{ mb: 3 }}>
               {goals.map((goal) => (
-                <Box key={goal} sx={{ 
-                  display: 'flex', 
-                  alignItems: 'center', 
-                  mb: 1,
-                  '&:hover': {
-                    backgroundColor: 'rgba(0, 0, 0, 0.04)',
-                    borderRadius: 1,
-                    px: 1,
-                    mx: -1,
-                  }
-                }}>
+                <Box 
+                  key={goal}
+                  onClick={() => handleGoalToggle(goal)}
+                  sx={{ 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    mb: 1,
+                    cursor: 'pointer',
+                    '&:hover': {
+                      backgroundColor: 'rgba(0, 0, 0, 0.04)',
+                      borderRadius: 1,
+                      px: 1,
+                      mx: -1,
+                    }
+                  }}
+                >
                   <Checkbox
                     checked={formData.primaryGoals.includes(goal)}
                     onChange={(e) => {
@@ -230,6 +235,13 @@ export default function UserOnboarding({ onComplete }: UserOnboardingProps) {
                 (step === 2 && !formData.experienceLevel) ||
                 (step === 3 && formData.primaryGoals.length === 0)
               }
+              sx={{
+                ...(step === 3 && {
+                  '&:hover': {
+                    backgroundColor: formData.primaryGoals.length > 0 ? 'primary.dark' : undefined,
+                  }
+                })
+              }}
             >
               {step === 3 ? 'Get Started' : 'Next'}
             </Button>
@@ -239,6 +251,12 @@ export default function UserOnboarding({ onComplete }: UserOnboardingProps) {
             <Typography variant="caption" color="text.secondary" align="center">
               Step {step} of 3
             </Typography>
+            {/* Debug info - remove in production */}
+            {process.env.NODE_ENV === 'development' && step === 3 && (
+              <Typography variant="caption" color="error" display="block">
+                Debug: Selected goals: {formData.primaryGoals.length} | Goals: {formData.primaryGoals.join(', ')}
+              </Typography>
+            )}
           </Box>
         </CardContent>
       </Card>
