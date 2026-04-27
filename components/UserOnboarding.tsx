@@ -16,6 +16,7 @@ import { useUserPreferences } from '@/hooks/useUserPreferences';
 
 interface UserOnboardingProps {
   onComplete: () => void;
+  onSkip?: () => void;
 }
 
 const professions = [
@@ -45,7 +46,7 @@ const goals = [
   'Analyze data',
 ];
 
-export default function UserOnboarding({ onComplete }: UserOnboardingProps) {
+export default function UserOnboarding({ onComplete, onSkip }: UserOnboardingProps) {
   const { completeOnboarding } = useUserPreferences();
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
@@ -59,6 +60,16 @@ export default function UserOnboarding({ onComplete }: UserOnboardingProps) {
       setStep(step + 1);
     } else {
       completeOnboarding(formData);
+      onComplete();
+    }
+  };
+
+  const handleSkip = () => {
+    // Mark as completed without saving preferences
+    localStorage.setItem('hasCompletedOnboarding', 'true');
+    if (onSkip) {
+      onSkip();
+    } else {
       onComplete();
     }
   };
@@ -219,12 +230,22 @@ export default function UserOnboarding({ onComplete }: UserOnboardingProps) {
         <CardContent sx={{ p: 4 }}>
           {renderStep()}
           
-          <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 4 }}>
+          <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mt: 4 }}>
             <Button
               onClick={() => setStep(Math.max(1, step - 1))}
               disabled={step === 1}
             >
               Back
+            </Button>
+            
+            {/* Skip Option */}
+            <Button
+              onClick={handleSkip}
+              color="secondary"
+              variant="text"
+              sx={{ fontSize: '0.875rem' }}
+            >
+              Skip for now
             </Button>
             
             <Button

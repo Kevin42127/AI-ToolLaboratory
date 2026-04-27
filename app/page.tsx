@@ -12,6 +12,7 @@ import EnhancedFilter from '@/components/EnhancedFilter';
 import Header from '@/components/Header';
 import FeatureDialog from '@/components/FeatureDialog';
 import UserOnboarding from '@/components/UserOnboarding';
+import UserReset from '@/components/UserReset';
 import { filterToolsByCategory, searchTools } from '@/lib/utils';
 import { useUserPreferences } from '@/hooks/useUserPreferences';
 
@@ -244,8 +245,17 @@ export default function HomePage() {
       
       {/* User Onboarding */}
       {isLoaded && isFirstVisit && (
-        <UserOnboarding onComplete={() => {}} />
+        <UserOnboarding 
+          onComplete={() => {}} 
+          onSkip={() => {
+            // Handle skip - no personalization applied
+            console.log('User skipped personalization');
+          }}
+        />
       )}
+      
+      {/* User Reset Button */}
+      <UserReset />
     </>
   );
 }
