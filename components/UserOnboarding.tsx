@@ -65,11 +65,16 @@ export default function UserOnboarding({ onComplete, onSkip }: UserOnboardingPro
   };
 
   const handleSkip = () => {
+    console.log('Skip button clicked');
     // Mark as completed without saving preferences
     localStorage.setItem('hasCompletedOnboarding', 'true');
+    console.log('Set hasCompletedOnboarding to true');
+    
     if (onSkip) {
+      console.log('Calling onSkip callback');
       onSkip();
     } else {
+      console.log('Calling onComplete callback');
       onComplete();
     }
   };
@@ -240,10 +245,18 @@ export default function UserOnboarding({ onComplete, onSkip }: UserOnboardingPro
             
             {/* Skip Option */}
             <Button
-              onClick={handleSkip}
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                handleSkip();
+              }}
               color="secondary"
               variant="text"
-              sx={{ fontSize: '0.875rem' }}
+              sx={{ 
+                fontSize: '0.875rem',
+                minWidth: 'auto',
+                px: 1,
+              }}
             >
               Skip for now
             </Button>
