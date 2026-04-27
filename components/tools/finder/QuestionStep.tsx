@@ -84,7 +84,7 @@ export default function QuestionStep({
                 transition: 'all 0.2s',
                 '&:hover': {
                   borderColor: 'primary.light',
-                  backgroundColor: 'rgba(66, 165, 245, 0.15)', // 淺藍色 15% 透明度
+                  backgroundColor: 'rgba(66, 165, 245, 0.15)', // Light blue 15% opacity
                 },
               }}
             >

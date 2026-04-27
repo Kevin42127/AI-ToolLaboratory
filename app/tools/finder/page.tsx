@@ -101,7 +101,7 @@ export default function ToolFinderPage() {
             ))}
           </Stepper>
 
-          {/* 移動端步驟指示器 */}
+          {/* Mobile step indicator */}
           <Box 
             sx={{ 
               display: { xs: 'block', sm: 'none' },

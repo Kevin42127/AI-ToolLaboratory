@@ -38,7 +38,7 @@ export default function BackToTop() {
       <Fab
         onClick={scrollToTop}
         size="medium"
-        aria-label="返回頂部"
+        aria-label="Back to top"
         sx={{
           position: 'fixed',
           bottom: 16,

@@ -17,7 +17,7 @@ export default function CategoryFilter({ selectedCategory, onSelectCategory }: C
   const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
-    // 檢測螢幕尺寸
+    // Detect screen size
     const checkScreenSize = () => {
       setIsDesktop(window.innerWidth >= 768);
     };
@@ -29,7 +29,7 @@ export default function CategoryFilter({ selectedCategory, onSelectCategory }: C
   }, []);
 
   useEffect(() => {
-    // 檢測內容是否溢出
+    // Check if content overflows
     const checkOverflow = () => {
       const container = document.getElementById('category-filter-container');
       if (container) {
@@ -47,7 +47,7 @@ export default function CategoryFilter({ selectedCategory, onSelectCategory }: C
 
   return (
     <Box>
-      {/* 桌面端提示 */}
+      {/* Desktop hint */}
       {shouldShowHint && (
         <Box sx={{ 
           display: 'flex', 
@@ -77,7 +77,7 @@ export default function CategoryFilter({ selectedCategory, onSelectCategory }: C
         </Box>
       )}
       
-      {/* 篩選按鈕容器 */}
+      {/* Filter buttons container */}
       <Box
         id="category-filter-container"
         sx={{
@@ -87,10 +87,10 @@ export default function CategoryFilter({ selectedCategory, onSelectCategory }: C
           pb: 1,
           px: 2,
           justifyContent: 'flex-start',
-          scrollbarWidth: 'thin', // 桌面端顯示細滾動條
-          msOverflowStyle: 'thin', // IE 和 Edge
+          scrollbarWidth: 'thin', // Desktop thin scrollbar
+          msOverflowStyle: 'thin', // IE and Edge
           '&::-webkit-scrollbar': {
-            height: isDesktop ? '6px' : 'none', // 桌面端顯示，移動端隱藏
+            height: isDesktop ? '6px' : 'none', // Desktop show, mobile hide
           },
           '&::-webkit-scrollbar-track': {
             backgroundColor: isDesktop ? 'grey.200' : 'transparent',
@@ -105,7 +105,7 @@ export default function CategoryFilter({ selectedCategory, onSelectCategory }: C
           },
           maxWidth: '100%',
           width: '100%',
-          // 桌面端添加漸變遮罩
+          // Desktop gradient mask
           ...(shouldShowHint && {
             '&:after': {
               content: '""',

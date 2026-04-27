@@ -4,7 +4,7 @@ import { tools } from '@/data/tools'
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://toollaboratory.vercel.app'
   
-  // 靜態頁面
+  // Static pages
   const staticPages = [
     {
       url: baseUrl,
@@ -14,7 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   ]
   
-  // 動態工具頁面
+  // Dynamic tool pages
   const toolPages = tools.map((tool) => ({
     url: `${baseUrl}/tools/${tool.id}`,
     lastModified: new Date(),

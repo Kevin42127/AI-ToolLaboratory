@@ -1,7 +1,7 @@
 {
   "name": "AI ToolLaboratory",
   "short_name": "AI ToolLab",
-  "description": "探索100款精選AI工具，提升您的工作效率",
+  "description": "Discover 100+ curated AI tools to boost your productivity",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

@@ -111,7 +111,7 @@ export default function Header({ searchQuery = '', onSearchChange, showSearch = 
           
           <Box sx={{ flexGrow: 1 }} />
           
-          {/* Quick Links - 桌面端 */}
+          {/* Quick Links - Desktop */}
           <Box sx={{ display: { xs: 'none', lg: 'flex' }, gap: 2 }}>
             <Button
               component={Link}

@@ -55,19 +55,19 @@ export default function ResultsStep({ preferences, onReset, loading, setLoading 
     setError('');
 
     try {
-      // 基礎評分算法
+      // Basic scoring algorithm
       const scoredTools = tools.map((tool) => {
         let score = 0;
         const matchReasons: string[] = [];
 
-        // 用途匹配 (40分)
+        // Purpose matching (40 points)
         const purposeMatch = tool.category.some((cat) => preferences.purpose.includes(cat));
         if (purposeMatch) {
           score += 40;
           matchReasons.push('Matches your purpose');
         }
 
-        // 價格匹配 (30分)
+        // Price matching (30 points)
         if (tool.pricing === preferences.budget) {
           score += 30;
           matchReasons.push('Fits your budget');
@@ -82,7 +82,7 @@ export default function ResultsStep({ preferences, onReset, loading, setLoading 
           matchReasons.push('Paid option available');
         }
 
-        // 功能匹配 (20分)
+        // Feature matching (20 points)
         const featureMatches = tool.tags.filter((tag) =>
           preferences.features.some((feature) => tag.toLowerCase().includes(feature.toLowerCase()))
         );
@@ -91,7 +91,7 @@ export default function ResultsStep({ preferences, onReset, loading, setLoading 
           matchReasons.push(`Has ${featureMatches.length} requested features`);
         }
 
-        // 經驗程度匹配 (10分)
+        // Experience level matching (10 points)
         if (preferences.experience === 'beginner' && tool.tags.includes('easy-to-use')) {
           score += 10;
           matchReasons.push('Beginner-friendly');
@@ -112,7 +112,7 @@ export default function ResultsStep({ preferences, onReset, loading, setLoading 
         };
       });
 
-      // 排序並取前10名
+      // Sort and take top 10
       const topRecommendations = scoredTools
         .filter((tool) => tool.score > 30)
         .sort((a, b) => b.score - a.score)
@@ -120,7 +120,7 @@ export default function ResultsStep({ preferences, onReset, loading, setLoading 
 
       setRecommendations(topRecommendations);
 
-      // 呼叫 Groq AI 生成個性化見解
+      // Call Groq AI to generate personalized insights
       await generateAIInsights(topRecommendations);
     } catch (err) {
       setError('Failed to generate recommendations. Please try again.');
